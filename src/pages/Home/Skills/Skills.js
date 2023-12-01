@@ -1,7 +1,16 @@
+import { Box, Center, Text} from '@chakra-ui/react'
 import React from 'react'
 
-export default function Skills() {
+export default function Skills({role}) {
   return (
-    <div>Skills</div>
+    <Box
+    height="100vh"
+    width="100vw"
+    bg= 'pink'
+    >
+        <Center>
+        <Text fontSize='9xl' >SKILLS</Text>
+        </Center>
+    </Box>
   )
 }

@@ -15,7 +15,6 @@ export default function ToggleButton({onChange, isChecked,  role}) {
     gap="20px"
     p='30px'
     bg='transparent'
-    marginTop='100px'
     >
         <Text   as={isUXDesigner ? 'i' : 'b'} fontSize='lg'> UX Designer</Text>
         <Switch onChange={onChange} isChecked={isChecked}   size='lg'></Switch>

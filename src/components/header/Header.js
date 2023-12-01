@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Flex,
   Spacer,
@@ -16,18 +16,19 @@ import {
   DrawerBody,
 } from '@chakra-ui/react';
 import { FaBars, FaArrowRight, FaDownload } from 'react-icons/fa';
-import logo1 from '../../assets/2.svg';
+
 
 const Navbar = ({ role }) => {
+  
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
 
   return (
+
     <Flex
       color={role.color}
       alignItems="center"
       gap="10px"
-      position="fixed"
       bgColor={role.bgColor}
       top="0"
       width="100%"
@@ -141,6 +142,7 @@ const Navbar = ({ role }) => {
         fontFamily="Raleway"
         gap="25px"
       >
+        
         <Link mr="4" color={role.color} href="#home">
           About
         </Link>
@@ -186,7 +188,9 @@ const Navbar = ({ role }) => {
           finalFocusRef={btnRef}
         >
           <DrawerOverlay>
-            <DrawerContent>
+            <DrawerContent
+            
+            >
               <DrawerCloseButton />
               <DrawerHeader>Menu</DrawerHeader>
               <DrawerBody>
@@ -202,9 +206,22 @@ const Navbar = ({ role }) => {
                 <Link mb="2" color="teal.500" href="#contact">
                   Contact
                 </Link>
-                <Button colorScheme="teal" variant="outline">
-                  Sign In
-                </Button>
+                <Button
+          rightIcon={<FaDownload />}
+          colorScheme={role.colorButton}
+          variant="outline"
+        >
+          Download Resume
+        </Button>
+
+        <Button
+          colorScheme={role.colorButton}
+          rightIcon={<FaArrowRight />}
+          variant="solid"
+        >
+          Let's Talk
+        </Button>
+                
               </DrawerBody>
             </DrawerContent>
           </DrawerOverlay>

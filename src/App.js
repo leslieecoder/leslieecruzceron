@@ -3,20 +3,23 @@ import {
   ChakraProvider,
   theme,
   Box,
-  Spacer,
-
 
 } from '@chakra-ui/react';
 import Header from './components/header/Header';
-import ToggleButton from './pages/Home/Hero/ToggleButton';
 import LogoUx from './assets/leslieecruzlogo.png'
 import LogoWd from './assets/leslieecruzlogo2.png'
 import Hero from './pages/Home/Hero/Hero'
-import UxImage from './assets/heroLes.png'
+import UxImage from './assets/lesHero.png'
 import WdImage from './assets/heroLesWD.png'
 import Loader from './components/loader/Loader';
+import Skills from './pages/Home/Skills/Skills';
 import { ParallaxProvider } from 'react-scroll-parallax';
-import Stars from './assets/starss.png'
+import Work from './pages/Home/Work/Work';
+import Contact from './pages/Home/Contact/Contact';
+import { Link, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
+import BackgroundImage from './utils/BackgroundImage'
+import BackgroundImageWd from './utils/BackgroundImageWd';
+
 
 
 function App() {
@@ -26,15 +29,15 @@ function App() {
         logo: LogoUx,
         image: UxImage,
         colorButton: 'pink',
-        color: 'black',
-        bgColor: 'white',
+        color: 'white',
+        bgColor: 'transparent',
         heroText1:'a UX designer on a mission to create',
         heroText2:'Intuitive & Beautiful',
         heroText3:'Digital Experiences.',
-        lesColorHero: '#F687B3',
+        lesColorHero: '#FAF089',
         fontHeader: 'Cookie',
         fontSizeLogo: '6xl',
-        toggleColor: '#F687B3'
+        toggleColor: '#FAF089'
 
     },
     
@@ -57,7 +60,7 @@ function App() {
 
 
   const [currentRole, setCurentRole] = useState('uxDesigner')
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -75,38 +78,49 @@ function App() {
 
  
   return (
-    <ChakraProvider theme={theme}>
     <ParallaxProvider>
+    <ChakraProvider theme={theme}>
+
  
 
 {loading ? (
         <Loader loading={loading} />
       ) : (
-        
+      <>
       
-      <Box bg={role[currentRole].bgColor} color={role[currentRole].color} transition="background-color 0.3s, color 0.3s" position="relative">
-      <Header role={role[currentRole]} zIndex={100} />
-      <Spacer/>
-      <ToggleButton role={role[currentRole]} onChange={handleSwitchRole} isChecked={currentRole === 'webDeveloper'} />
+      
+    <Box bgColor={role.bgColor} color={role[currentRole].color}>
 
-      <Hero role={role[currentRole]}/>
-     
-     
+    {currentRole === 'uxDesigner' ? (
+                <BackgroundImage />
+              ) : (
+                <BackgroundImageWd />
+              )}
+      <Header role={role[currentRole]} />
+ 
+      <Hero isChecked={currentRole === 'webDeveloper'}  onChange={handleSwitchRole} role={role[currentRole]}/>
+      <Element name="skills" >
+          <Skills role={role[currentRole]} />
+      </Element>
+      <Element name="section2" className="element">
+        <Work />
+      </Element> 
+      <Element name="section2" className="element">
+        <Contact />
+      </Element> 
+      <Link to="skills" spy={true} smooth={true} duration={500} offset={-50}>
+       Scroll to Skills
+      </Link>
 
-     
+       
       </Box>
-
-  
-  
-     
-
+      </>
+      
   
       )}
-
-
-
-    </ParallaxProvider>
+  
     </ChakraProvider>
+    </ParallaxProvider>
 
   );
 }
