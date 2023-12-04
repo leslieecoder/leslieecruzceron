@@ -2,18 +2,15 @@ import {
   Image,
   Box,
   Text,
-  Button,
   Flex,
   Center,
-  background,
 } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { FaAngleDoubleDown } from 'react-icons/fa';
 import { useSpring, animated } from 'react-spring';
-
-
-
+import Social from '../../../components/social/Social';
 import ToggleButton from './ToggleButton';
+
 export default function Hero({ role, onChange, isChecked }) {
 
 
@@ -35,17 +32,22 @@ export default function Hero({ role, onChange, isChecked }) {
 
 
       <Box
+      height="100vh"
+      width="100vw"
         p="50px"
         transition="background-color 0.3s, color 0.3s"
         paddingX={{ base: '10px', md: '100px' }}
-        height="100vh"
-    
-        position="relative"
-        zIndex="1" 
+        m={9}  
       >
+      
         <ToggleButton onChange={onChange} isChecked={isChecked} />
-
-        <Flex direction={{ base: 'column', md: 'row' }}>
+     
+        <Flex
+        alignItems='center'
+        direction={{ base: 'column', md: 'row' }}
+        gap='35px'
+        >
+          
           <animated.div style={LettersProps}>
             <Box
               color={role.color}
@@ -73,22 +75,54 @@ export default function Hero({ role, onChange, isChecked }) {
               </Box>
 
               <Text
-                _hover="color"
-                transition="background-color 0.3s, color 0.3s"
+          
+              
                 style={{
                   display: 'inline',
                   fontFamily: 'Raleway',
                   letterSpacing: '4px',
                 }}
+              
                 fontSize={{ base: '5xl', md: '7xl' }}
                 as="b"
+                _hover={{ 
+                  textShadow: "pink 1px 0 10px",
+                  transition: "textShadow 0.3s ease-in-out  ",
+                  animation: "shake 0.3s ease-in-out infinite"
+                }}
+                css={`
+                  @keyframes shake {
+                    0% { transform: translateX(0); }
+                    25% { transform: translateX(-4px); }
+                    50% { transform: translateX(4px); }
+                    75% { transform: translateX(-2px); }
+                    100% { transform: translateX(2px); }
+                  }
+                `}
+                
               >
                 {role.heroText2}
               </Text>
+
               <Text
-                transition="background-color 0.3s, color 0.3s"
+            
                 style={{ fontFamily: 'Andada Pro' }}
                 fontSize={{ base: '6xl', md: '8xl' }}
+                _hover={{ 
+                  textShadow: "#FC0 1px 0 10px",
+                  animation: "shake 0.3s ease-in-out infinite"
+                }}
+                css={`
+                  @keyframes shake {
+                    0% { transform: translateX(0); }
+                    25% { transform: translateX(-4px); }
+                    50% { transform: translateX(4px); }
+                    75% { transform: translateX(-2px); }
+                    100% { transform: translateX(2px); }
+                  }
+                `}
+      
+
               >
                 {role.heroText3}
               </Text>
@@ -112,6 +146,9 @@ export default function Hero({ role, onChange, isChecked }) {
             />
           </animated.div>
         </Flex>
+        <Social/>
+
+        
       </Box>
   
   );

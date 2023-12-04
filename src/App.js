@@ -14,13 +14,19 @@ import WdImage from './assets/heroLesWD.png'
 import Loader from './components/loader/Loader';
 import Skills from './pages/Home/Skills/Skills';
 import { ParallaxProvider } from 'react-scroll-parallax';
-import Work from './pages/Home/Work/Work';
-import Contact from './pages/Home/Contact/Contact';
-import { Link, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
 import BackgroundImage from './utils/BackgroundImage'
 import BackgroundImageWd from './utils/BackgroundImageWd';
-
-
+import Figma from './assets/skills/figma.png'
+import JavaScript from './assets/skills/JavaScript.png'
+import AdobeXD from './assets/skills/adobeXD.png'
+import Illustrator from './assets/skills/illustrator.png'
+import InVision from './assets/skills/inVision.png'
+import Photoshop from './assets/skills/photoshop.png'
+import Css from './assets/skills/css.png'
+import ReactLogo from './assets/skills/react.png'
+import Html from './assets/skills/html.png'
+import Python from './assets/skills/python.png'
+import Git from './assets/skills/git.png'
 
 function App() {
 
@@ -28,16 +34,24 @@ function App() {
     uxDesigner: {
         logo: LogoUx,
         image: UxImage,
-        colorButton: 'pink',
+        colorButton: '#B721FF',
         color: 'white',
-        bgColor: 'transparent',
+        bgColor: '#B429FF',
         heroText1:'a UX designer on a mission to create',
         heroText2:'Intuitive & Beautiful',
         heroText3:'Digital Experiences.',
         lesColorHero: '#FAF089',
         fontHeader: 'Cookie',
         fontSizeLogo: '6xl',
-        toggleColor: '#FAF089'
+        toggleColor: '#FAF089',
+        skillsImages: {
+
+          skillOne: Figma,
+          skillTwo: AdobeXD,
+          skillThree: Illustrator,
+          skillFour: Photoshop,
+          skillFive: InVision
+        }
 
     },
     
@@ -47,14 +61,21 @@ function App() {
         image: WdImage,
         colorButton: 'purple',
         color: 'white',
-        bgColor: 'black',
+        bgColor: '#171923',
         heroText1:'a programmer on a mission to develop',
         heroText2:'Dynamic & Stunning',
         heroText3:'Web Solutions.',
         lesColorHero: '#D6BCFA',
         fontHeader: ' VT323',
         fontSizeLogo: '6xl',
-        toggleColor: '#D6BCFA'
+        toggleColor: '#D6BCFA',
+        skillsImages: {
+          skillOne: JavaScript,
+          skillTwo: ReactLogo ,
+          skillThree: Css,
+          skillFour: Html,
+          skillFive: Python
+        }
     }
   }
 
@@ -89,31 +110,19 @@ function App() {
       <>
       
       
-    <Box bgColor={role.bgColor} color={role[currentRole].color}>
+    
+    <Header role={role[currentRole]} />
+
 
     {currentRole === 'uxDesigner' ? (
                 <BackgroundImage />
               ) : (
                 <BackgroundImageWd />
               )}
-      <Header role={role[currentRole]} />
  
       <Hero isChecked={currentRole === 'webDeveloper'}  onChange={handleSwitchRole} role={role[currentRole]}/>
-      <Element name="skills" >
-          <Skills role={role[currentRole]} />
-      </Element>
-      <Element name="section2" className="element">
-        <Work />
-      </Element> 
-      <Element name="section2" className="element">
-        <Contact />
-      </Element> 
-      <Link to="skills" spy={true} smooth={true} duration={500} offset={-50}>
-       Scroll to Skills
-      </Link>
+      <Skills role={role[currentRole]}/>
 
-       
-      </Box>
       </>
       
   
