@@ -1,0 +1,49 @@
+{
+
+  
+    "uxDesigner": {
+      "image": "./assets/UxImage.png",
+      "colorButton": "#B721FF",
+      "color": "white",
+      "bgColor": "#B429FF",
+      "heroText1": "a UX Designer on a mission to create",
+      "heroText2": "Intuitive & Beautiful",
+      "heroText3": "Digital Experiences.",
+      "lesColorHero": "#FAF089",
+      "fontHeader": "Cookie",
+      "fontSizeLogo": {"base": "4xl", "md": "5xl"},
+      "toggleColor": "#FAF089",
+      "skillsImages": {
+        "skillOne": "./assets/skills/Figma.png",
+        "skillTwo": "./assets/skills/AdobeXD.png",
+        "skillThree": "./assets/skills/Illustrator.png",
+        "skillFour": "./assets/skills/Photoshop.png",
+        "skillFive": "./assets/skills/InVision.png"
+      },
+      "project1": {
+        "name": "StackPro",
+        "description": "Lorem Ipsum"
+      }
+    },
+    "webDeveloper": {
+      "image": "./assets/WdImage.png",
+      "colorButton": "purple",
+      "color": "white",
+      "bgColor": "#171923",
+      "heroText1": "a Web Dev on a mission to develop",
+      "heroText2": "Dynamic & Stunning",
+      "heroText3": "Web Solutions.",
+      "lesColorHero": "#D6BCFA",
+      "fontHeader": "VT323",
+      "fontSizeLogo": {"base": "4xl", "md": "5xl"},
+      "toggleColor": "#D6BCFA",
+      "skillsImages": {
+        "skillOne": "./assets/skills/JavaScript.png",
+        "skillTwo": "./assets/skills/React.png",
+        "skillThree": "./assets/skills/Css.png",
+        "skillFour": "./assets/skills/Html.png",
+        "skillFive": "./assets/skills/Python.png"
+      }
+    }
+  }
+  

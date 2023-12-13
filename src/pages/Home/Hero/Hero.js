@@ -6,12 +6,13 @@ import {
   Center,
 } from '@chakra-ui/react';
 import React, { useState } from 'react';
-import { FaAngleDoubleDown } from 'react-icons/fa';
-import { useSpring, animated } from 'react-spring';
-import Social from '../../../components/social/Social';
-import ToggleButton from './ToggleButton';
 
-export default function Hero({ role, onChange, isChecked }) {
+import { useSpring, animated } from 'react-spring';
+
+import HomeMenu from '../HomeMenu';
+
+
+export default function Hero({role}) {
 
 
   const ImageProps = useSpring({
@@ -32,32 +33,31 @@ export default function Hero({ role, onChange, isChecked }) {
 
 
       <Box
-      height="100vh"
-      width="100vw"
-        p="50px"
         transition="background-color 0.3s, color 0.3s"
         paddingX={{ base: '10px', md: '100px' }}
-        m={9}  
+        height="100vh"
+        marginX={9}
+      
       >
       
-        <ToggleButton onChange={onChange} isChecked={isChecked} />
+       
      
         <Flex
         alignItems='center'
         direction={{ base: 'column', md: 'row' }}
-        gap='35px'
+        gap='10px'
         >
           
           <animated.div style={LettersProps}>
             <Box
-              color={role.color}
+              color={role?.color}
               mb={{ base: '20px', md: '0' }}
               transition="background-color 0.3s, color 0.3s"
             >
               <Box>
                 <Text
                   transition="background-color 0.3s, color 0.3s"
-                  fontSize={{ base: '1xl', md: '3xl' }}
+                  fontSize={{ base: '1xl', md: '2xl' }}
                   style={{ display: 'inline', fontFamily: 'Raleway' }}
                   textAlign={{ base: 'center', md: 'left' }}
                 >
@@ -66,11 +66,12 @@ export default function Hero({ role, onChange, isChecked }) {
                     as="span"
                     transition="background-color 0.3s, color 0.3s"
                     fontWeight="bold"
-                    color={role.lesColorHero}
+                    color={role?.lesColorHero}
                   >
                     Lesliee Cruz
-                  </Text>{' '}
-                  {role.heroText1}
+                  </Text>
+                  {' '}
+                  {role?.heroText1}
                 </Text>
               </Box>
 
@@ -80,16 +81,16 @@ export default function Hero({ role, onChange, isChecked }) {
                 style={{
                   display: 'inline',
                   fontFamily: 'Raleway',
-                  letterSpacing: '4px',
+                  letterSpacing: '2px',
+                  textShadow:"pink 1px 0 10px",
+                  
                 }}
+                textAlign={{ base: 'center', md: 'left' }}
               
-                fontSize={{ base: '5xl', md: '7xl' }}
+                fontSize={{ base: '4xl', md: '6xl' }}
                 as="b"
-                _hover={{ 
-                  textShadow: "pink 1px 0 10px",
-                  transition: "textShadow 0.3s ease-in-out  ",
-                  animation: "shake 0.3s ease-in-out infinite"
-                }}
+             
+    
                 css={`
                   @keyframes shake {
                     0% { transform: translateX(0); }
@@ -101,13 +102,14 @@ export default function Hero({ role, onChange, isChecked }) {
                 `}
                 
               >
-                {role.heroText2}
+                {role?.heroText2}
               </Text>
 
               <Text
             
                 style={{ fontFamily: 'Andada Pro' }}
-                fontSize={{ base: '6xl', md: '8xl' }}
+                fontSize={{ base: '5xl', md: '7xl' }}
+                textAlign={{ base: 'center', md: 'left' }}
                 _hover={{ 
                   textShadow: "#FC0 1px 0 10px",
                   animation: "shake 0.3s ease-in-out infinite"
@@ -124,29 +126,30 @@ export default function Hero({ role, onChange, isChecked }) {
       
 
               >
-                {role.heroText3}
+                {role?.heroText3}
               </Text>
-              <Center m={{ base: '10px', md: '50px' }}>
-                <FaAngleDoubleDown
-                  size="50px"
-                  color={role.lesColorHero}
-                  transition="transform 0.3s ease-in-out"
-                  _hover={{ transform: 'scale(1.1)' }}
-                />
-              </Center>
+
+             <Box
+             paddingY='3vh'
+             >
+             <HomeMenu/>
+             </Box>
+              
             </Box>
           </animated.div>
           <animated.div style={ImageProps}>
+          <Center width="100%">
             <Image
-              boxSize={{ base: '300px', md: '600px' }}
+              boxSize={{ base: '50%', md: '90%' }}
               objectFit="cover"
-              src={role.image}
+              src={role?.image}
               transition="transform 0.3s ease-in-out"
               _hover={{ transform: 'scale(1.1)' }}
             />
+            </Center>
           </animated.div>
         </Flex>
-        <Social/>
+       
 
         
       </Box>

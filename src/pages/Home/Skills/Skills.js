@@ -10,9 +10,11 @@ export default function Skills({role}) {
     height="100vh"
     width="100vw"
     bg= 'pink'
+    zIndex='1'
     >
 
       <Flex
+      direction={{ base: 'column', md: 'row' }}
       justifyContent='center'
       gap={9}
       >
@@ -28,7 +30,7 @@ export default function Skills({role}) {
                   fontFamily: 'Raleway',
                   fontWeight: 'Bold'
                 }}
-                color="pink.100" as ="b" fontSize="6xl"
+                color="pink.100" as ="b" fontSize={{ base: '3xl', md: '6xl' }}
            
                 >My </Text>
          
@@ -51,7 +53,7 @@ export default function Skills({role}) {
                   }
                 `}
       
-                color="white" as ="b" fontSize="8xl">TOOLKIT</Text>
+                color="white" as ="b" fontSize={{ base: '4xl', md: '8xl' }}>TOOLKIT</Text>
         
             
              

@@ -14,12 +14,36 @@ import {
   DrawerCloseButton,
   DrawerHeader,
   DrawerBody,
+  Stack
 } from '@chakra-ui/react';
-import { FaBars, FaArrowRight, FaDownload } from 'react-icons/fa';
+import { FaBars, FaArrowRight, FaDownload, FaHome, FaImages, FaMailBulk } from 'react-icons/fa';
 
 const Navbar = ({ role }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
+
+  const links = [
+    {
+      label: 'About Me',
+      icon: <FaHome/>,
+      id: 'about'
+    },
+    {
+      label: 'Work',
+      icon: <FaImages/>,
+      id: 'work'
+    },
+    {
+      label: 'Home',
+      icon: <FaHome/>,
+      id: 'home'
+    },
+    {
+      label: 'Contact',
+      icon: <FaMailBulk/>,
+      id: 'contact'
+    }
+  ]
 
   return (
     <Flex
@@ -29,16 +53,18 @@ const Navbar = ({ role }) => {
       bgColor={role.bgColor}
       top="0"
       width="100%"
-      paddingX={{ base: '10px', md: '100px' }}
+      paddingX={{ base: '40px', md: '150px' }}
+      paddingY='2vh'
+   
     >
-      <Flex alignItems="center" gap="10px">
+      <Flex alignItems="center" gap="10px"    zIndex='2'>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           xmlnsxlink="http://www.w3.org/1999/xlink"
-          width="80"
+          width="50"
           zoomAndPan="magnify"
           viewBox="0 0 375 374.999991"
-          height="80"
+          height="50"
           preserveAspectRatio="xMidYMid meet"
           version="1.0"
         >
@@ -138,20 +164,22 @@ const Navbar = ({ role }) => {
         alignItems="center"
         fontFamily="Raleway"
         gap="25px"
+        zIndex='2'
       >
-        <Link mr="4" color={role.color} href="#home">
-          About
+    {links.map((link) => (
+      <Flex
+      align='center'
+      gap='5px'
+      >
+        <Link  mb="2" color="white" href="#home">
+          
+          {link.label}
         </Link>
-        <Link mr="4" color={role.color} href="#about"></Link>
-        <Link mr="4" color={role.color} href="#services">
-          Work
-        </Link>
-        <Link mr="4" color={role.color} href="#contact">
-          Experince
-        </Link>
-        <Link mr="4" color={role.color} href="#contact">
-          Learning
-        </Link>
+        </Flex>
+
+    ))}
+  
+       
         <Button
           rightIcon={<FaDownload />}
           colorScheme={role.colorButton}
@@ -170,52 +198,61 @@ const Navbar = ({ role }) => {
       </Box>
 
       <Box display={{ base: 'flex', md: 'none' }}>
+
         <IconButton
           ref={btnRef}
           icon={<FaBars />}
           onClick={onOpen}
           aria-label="Open menu"
-          colorScheme="pink"
-        />
+          color="white" 
+          colorScheme='transparent'       />
         <Drawer
           isOpen={isOpen}
           placement="right"
           onClose={onClose}
           finalFocusRef={btnRef}
         >
-          <DrawerOverlay>
-            <DrawerContent>
+    <DrawerOverlay minHeight='100vh' >
+            <DrawerContent
+            bgColor={role.bgColor}
+            color='white'
+            >
               <DrawerCloseButton />
               <DrawerHeader>Menu</DrawerHeader>
-              <DrawerBody>
-                <Link mb="2" color="teal.500" href="#home">
-                  Home
-                </Link>
-                <Link mb="2" color="teal.500" href="#about">
-                  About
-                </Link>
-                <Link mb="2" color="teal.500" href="#services">
-                  Services
-                </Link>
-                <Link mb="2" color="teal.500" href="#contact">
-                  Contact
-                </Link>
-                <Button
-                  rightIcon={<FaDownload />}
-                  colorScheme={role.colorButton}
-                  variant="outline"
-                >
-                  Download Resume
-                </Button>
 
-                <Button
-                  colorScheme={role.colorButton}
-                  rightIcon={<FaArrowRight />}
-                  variant="solid"
-                >
-                  Let's Talk
-                </Button>
-              </DrawerBody>
+              
+              <DrawerBody>
+  <Stack spacing="2" align='center'>
+ 
+    <Link mb="2" color="white" href="#home">
+      Home
+    </Link>
+    <Link mb="2" color="white" href="#about">
+      About
+    </Link>
+    <Link mb="2" color="white" href="#services">
+      Services
+    </Link>
+    <Link   mb="2" color="white" href="#contact">
+      Contact
+    </Link>
+    <Button
+      rightIcon={<FaDownload />}
+      colorScheme={role.colorButton}
+      variant="outline"
+    >
+      Download Resume
+    </Button>
+    <Button
+      colorScheme={role.colorButton}
+      rightIcon={<FaArrowRight />}
+      variant="solid"
+    >
+      Let's Talk
+    </Button>
+  </Stack>
+</DrawerBody>
+             
             </DrawerContent>
           </DrawerOverlay>
         </Drawer>

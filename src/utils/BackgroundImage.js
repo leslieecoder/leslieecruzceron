@@ -110,8 +110,8 @@ export default function BackgroundImage() {
     retina_detect: true,
   }}
   style={{
-    height: '100%',
-    width: '100%',
+    height: '100vh',
+    width: '100vw',
     position: 'absolute',
     zIndex: 0,
   }}

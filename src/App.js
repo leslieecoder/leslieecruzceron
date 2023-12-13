@@ -1,86 +1,159 @@
-import React, {useState, useEffect} from 'react';
-import {
-  ChakraProvider,
-  theme,
-  Box,
-
-} from '@chakra-ui/react';
-import Header from './components/header/Header';
-import LogoUx from './assets/leslieecruzlogo.png'
-import LogoWd from './assets/leslieecruzlogo2.png'
-import Hero from './pages/Home/Hero/Hero'
-import UxImage from './assets/lesHero.png'
-import WdImage from './assets/heroLesWD.png'
+import React, { useState, useEffect } from 'react';
+import { ChakraProvider,Progress, theme, Box } from '@chakra-ui/react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import UxImage from './assets/lesHero.png';
+import WdImage from './assets/heroLesWD.png';
 import Loader from './components/loader/Loader';
-import Skills from './pages/Home/Skills/Skills';
-import { ParallaxProvider } from 'react-scroll-parallax';
-import BackgroundImage from './utils/BackgroundImage'
-import BackgroundImageWd from './utils/BackgroundImageWd';
-import Figma from './assets/skills/figma.png'
-import JavaScript from './assets/skills/JavaScript.png'
-import AdobeXD from './assets/skills/adobeXD.png'
-import Illustrator from './assets/skills/illustrator.png'
-import InVision from './assets/skills/inVision.png'
-import Photoshop from './assets/skills/photoshop.png'
-import Css from './assets/skills/css.png'
-import ReactLogo from './assets/skills/react.png'
-import Html from './assets/skills/html.png'
-import Python from './assets/skills/python.png'
-import Git from './assets/skills/git.png'
+import Home from './pages/Home/Home';
+import BackgroundImage from '../src/utils/BackgroundImage'
+import BackgroundImageWd from '../src/utils/BackgroundImageWd';
+import Header from './components/header/Header'
+import ToggleButton from './pages/Home/Hero/ToggleButton'
+import Social from './components/social/Social'
+import About from './pages/About/About';
+import {FaFigma, FaAdobe, FaInvision, FaUser, FaCog, FaBook } from 'react-icons/fa';
+import { DiIllustrator, DiPhotoshop } from "react-icons/di";
+import { FaJs, FaReact, FaHtml5, FaCss3, FaGit, FaNodeJs, FaDatabase, FaServer, FaDatabase as FaMongoDb, FaDatabase as FaSql, FaAws, FaPython } from 'react-icons/fa';
+
+
 
 function App() {
 
   const role = {
     uxDesigner: {
-        logo: LogoUx,
-        image: UxImage,
-        colorButton: '#B721FF',
-        color: 'white',
-        bgColor: '#B429FF',
-        heroText1:'a UX designer on a mission to create',
-        heroText2:'Intuitive & Beautiful',
-        heroText3:'Digital Experiences.',
-        lesColorHero: '#FAF089',
-        fontHeader: 'Cookie',
-        fontSizeLogo: '6xl',
-        toggleColor: '#FAF089',
-        skillsImages: {
-
-          skillOne: Figma,
-          skillTwo: AdobeXD,
-          skillThree: Illustrator,
-          skillFour: Photoshop,
-          skillFive: InVision
+      image: UxImage,
+      colorButton: '#B721FF',
+      color: 'white',
+      bgColor: '#B429FF',
+      heroText1: 'a UX Designer on a mission to create',
+      heroText2: 'Intuitive & Beautiful',
+      heroText3: 'Digital Experiences.',
+      lesColorHero: '#FAF089',
+      fontHeader: 'Cookie',
+      fontSizeLogo: { base: '4xl', md: '5xl' },
+      toggleColor: '#FAF089',
+      skills:  { 
+        
+        skillOne: {
+            name: "Figma",
+            icon:  <FaFigma  />,
+            progress: <Progress my='10px' hasStripe value={100} colorScheme='pink'/>
+          },
+          skillTwo: {
+            name: "Adobe XD",
+            icon: <FaAdobe />,
+          },
+          skillTwo: {
+            name: "Adobe XD",
+            icon: <FaAdobe />,
+            progress: <Progress my='10px' hasStripe value={80} colorScheme='pink' />,
+          },
+          skillThree: {
+            name: "Illustrator",
+            icon: <DiIllustrator />,
+            progress: <Progress my='10px' hasStripe value={70} colorScheme='pink' />,
+          },
+          skillFour: {
+            name: "Design Systems",
+            icon: <FaBook />,
+            progress: <Progress my='10px' hasStripe value={90} colorScheme='pink' />,
+          },
+          skillFive: {
+            name: "Invision",
+            icon: <FaInvision />,
+            progress: <Progress my='10px' hasStripe value={70} colorScheme='pink' />,
+          },
+          skillSix: {
+            name: "Prototyping",
+            icon: <FaCog />,
+            progress: <Progress my='10px' hasStripe value={90} colorScheme='pink' />,
+          },
+          skillSeven: {
+            name: "User Testing",
+            icon: <FaUser />,
+            progress: <Progress my='10px' hasStripe value={90} colorScheme='pink' />,
+          },
+          skillEight: {
+            name: "Design Thinking",
+            icon: <FaBook />,
+            progress: <Progress my='10px' hasStripe value={95} colorScheme='pink' />,
+          },
+   
+      
+    },
+        experience: {
+          icon: <FaBook/  >,
+          name: 'BYU-Idaho',
+          title: 'Teacher Asistant',
+          description: 'Lorem Ipsum studd'
         }
+     
 
     },
-    
 
     webDeveloper: {
-        logo: LogoWd,
-        image: WdImage,
-        colorButton: 'purple',
-        color: 'white',
-        bgColor: '#171923',
-        heroText1:'a programmer on a mission to develop',
-        heroText2:'Dynamic & Stunning',
-        heroText3:'Web Solutions.',
-        lesColorHero: '#D6BCFA',
-        fontHeader: ' VT323',
-        fontSizeLogo: '6xl',
-        toggleColor: '#D6BCFA',
-        skillsImages: {
-          skillOne: JavaScript,
-          skillTwo: ReactLogo ,
-          skillThree: Css,
-          skillFour: Html,
-          skillFive: Python
-        }
-    }
-  }
+      image: WdImage,
+      colorButton: 'purple',
+      color: 'white',
+      bgColor: '#171923',
+      heroText1: 'a Web Dev on a mission to develop',
+      heroText2: 'Dynamic & Stunning',
+      heroText3: 'Web Solutions.',
+      lesColorHero: '#D6BCFA',
+      fontHeader: ' VT323',
+      fontSizeLogo: { base: '4xl', md: '5xl' },
+      toggleColor: '#D6BCFA',
+      skills: {
+          skillOne: {
+            name: "JavaScript",
+            icon: <FaJs />,
+            progress: <Progress my='10px' hasStripe value={80} colorScheme='purple'/>
+          },
+          skillTwo: {
+            name: "React",
+            icon: <FaReact />,
+            progress: <Progress my='10px' hasStripe value={85} colorScheme='purple' />,
+          },
+          skillThree: {
+            name: "HTML",
+            icon: <FaHtml5 />,
+            progress: <Progress my='10px' hasStripe value={95} colorScheme='purple' />,
+          },
+          skillFour: {
+            name: "CSS",
+            icon: <FaCss3 />,
+            progress: <Progress my='10px' hasStripe value={90} colorScheme='purple' />,
+          },
+          skillFive: {
+            name: "Git and GitHub",
+            icon: <FaGit />,
+            progress: <Progress my='10px' hasStripe value={85} colorScheme='purple' />,
+          },
+          skillSix: {
+            name: "Node.js",
+            icon: <FaNodeJs />,
+            progress: <Progress my='10px' hasStripe value={60} colorScheme='purple' />,
+          },
+          skillSeven: {
+            name: "GraphQL",
+            icon: <FaServer />,
+            progress: <Progress my='10px' hasStripe value={65} colorScheme='purple' />,
+          },
+          skillEight: {
+            name: "MongoDB & SQL",
+            icon: <FaMongoDb />,
+            progress: <Progress my='10px' hasStripe value={50} colorScheme='purple' />,
+          },
+       
+      
+       
+}
+    },
+  };
 
+ 
 
-  const [currentRole, setCurentRole] = useState('uxDesigner')
+  const [currentRole, setCurentRole] = useState('uxDesigner');
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -92,45 +165,52 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-
   const handleSwitchRole = () => {
-    setCurentRole((prevRole) => (prevRole === 'uxDesigner' ? 'webDeveloper' : 'uxDesigner'))
-  }
+    setCurentRole(prevRole =>
+      prevRole === 'uxDesigner' ? 'webDeveloper' : 'uxDesigner'
+    );
+  };
+  const skillKeys = Object.keys(role[currentRole].skills);
+  console.log("Skills", skillKeys)
 
- 
   return (
-    <ParallaxProvider>
     <ChakraProvider theme={theme}>
-
- 
-
-{loading ? (
+      {loading ? (
         <Loader loading={loading} />
       ) : (
+
       <>
-      
-      
-    
-    <Header role={role[currentRole]} />
+     
+        {currentRole === 'uxDesigner' ? (
+          
+          <BackgroundImage />
+        ) : (
+          <BackgroundImageWd />
+        )}
+        
 
+        <Header role={role[currentRole]} />
+        <ToggleButton onChange={handleSwitchRole} isChecked={currentRole === 'webDeveloper'} />
+        <Social/>
+        <BrowserRouter>
+          <Routes>
+          <Route path="/" element={<Home
+                role={role[currentRole]}
+                currentRole={currentRole}
+                handleSwitchRole={handleSwitchRole}
+              />
+  }>
+          </Route>
+          <Route path="about" element={<About role={role[currentRole]}  currentRole={currentRole} />} />
 
-    {currentRole === 'uxDesigner' ? (
-                <BackgroundImage />
-              ) : (
-                <BackgroundImageWd />
-              )}
- 
-      <Hero isChecked={currentRole === 'webDeveloper'}  onChange={handleSwitchRole} role={role[currentRole]}/>
-      <Skills role={role[currentRole]}/>
-
-      </>
+          </Routes>
       
-  
+        </BrowserRouter>
+
+        </>
+           
       )}
-  
     </ChakraProvider>
-    </ParallaxProvider>
-
   );
 }
 

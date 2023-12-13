@@ -5,7 +5,8 @@ import {
     Flex,
     Center,
     Button,
-    Image
+    Image,
+    Stack
 
   } from '@chakra-ui/react';
 import Key from './../assets/key.png'
@@ -69,26 +70,27 @@ export default function ToolKitBox({role}) {
        
        
         >
+
             
            <Center height="100%" >
            
-           <Button rounded='20px' h='100px' w='100px'  mx={2}  style={{ background: 'rgba(255, 255, 255, 0.4)' }} variant="solid">
+           <Button rounded='20px' h='10vh' w='20vw'    mx={2}  style={{ background: 'rgba(255, 255, 255, 0.4)' }} variant="solid">
                     
                     <Image src={role.skillsImages.skillOne}/>
                    
             </Button>
            
             
-            <Button rounded='20px' h='100px' w='100px'  mx={2}  style={{ background: 'rgba(255, 255, 255, 0.4)' }} variant="solid">
+            <Button rounded='20px'h='10vh' w='20vw'   mx={2}  style={{ background: 'rgba(255, 255, 255, 0.4)' }} variant="solid">
                     <Image _hover={{ transform: 'scale(1.1)' }} src={role.skillsImages.skillTwo}></Image>
             </Button>
-            <Button rounded='20px' h='100px' w='100px'  mx={2} style={{ background: 'rgba(255, 255, 255, 0.4)' }} variant="solid">
+            <Button rounded='20px' h='10vh' w='20vw'  mx={2} style={{ background: 'rgba(255, 255, 255, 0.4)' }} variant="solid">
                     <Image src={role.skillsImages.skillThree}></Image>
             </Button>
-            <Button rounded='20px' h='100px' w='100px'  mx={2} style={{ background: 'rgba(255, 255, 255, 0.4)' }} variant="solid">
+            <Button rounded='20px'h='10vh' w='20vw'   mx={2} style={{ background: 'rgba(255, 255, 255, 0.4)' }} variant="solid">
                     <Image src={role.skillsImages.skillFour}></Image>    
             </Button>
-            <Button rounded='20px' h='100px' w='100px'  mx={2} style={{ background: 'rgba(255, 255, 255, 0.4)' }} variant="solid">
+            <Button rounded='20px'h='10vh' w='20vw'   mx={2} style={{ background: 'rgba(255, 255, 255, 0.4)' }} variant="solid">
                     <Image src={role.skillsImages.skillFive}></Image>    
             </Button>
          
