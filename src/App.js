@@ -14,7 +14,7 @@ import About from './pages/About/About';
 import {FaFigma, FaAdobe, FaInvision, FaUser, FaCog, FaBook } from 'react-icons/fa';
 import { DiIllustrator, DiPhotoshop } from "react-icons/di";
 import { FaJs, FaReact, FaHtml5, FaCss3, FaGit, FaNodeJs, FaDatabase, FaServer, FaDatabase as FaMongoDb, FaDatabase as FaSql, FaAws, FaPython } from 'react-icons/fa';
-
+import FamilySearchLogo from './assets/familySearch.png'
 
 
 function App() {
@@ -32,16 +32,27 @@ function App() {
       fontHeader: 'Cookie',
       fontSizeLogo: { base: '4xl', md: '5xl' },
       toggleColor: '#FAF089',
+      experience: {
+        experienceOne: {
+          logo: FamilySearchLogo,
+          name: 'FamilySearch',
+          title: 'UX Designer & Developer',
+          date: 'Jun 2023 - Now',
+        },
+        experienceTwo: {
+          logo: FamilySearchLogo,
+          name: 'The Church of JesusChrist of Latter-day Saints',
+          title: 'UX Designer',
+          date: 'A',
+        },
+
+      },
       skills:  { 
         
         skillOne: {
             name: "Figma",
             icon:  <FaFigma  />,
             progress: <Progress my='10px' hasStripe value={100} colorScheme='pink'/>
-          },
-          skillTwo: {
-            name: "Adobe XD",
-            icon: <FaAdobe />,
           },
           skillTwo: {
             name: "Adobe XD",
@@ -81,13 +92,7 @@ function App() {
    
       
     },
-        experience: {
-          icon: <FaBook/  >,
-          name: 'BYU-Idaho',
-          title: 'Teacher Asistant',
-          description: 'Lorem Ipsum studd'
-        }
-     
+    
 
     },
 
@@ -103,6 +108,15 @@ function App() {
       fontHeader: ' VT323',
       fontSizeLogo: { base: '4xl', md: '5xl' },
       toggleColor: '#D6BCFA',
+      experience: {
+        experienceOne: {
+          logo: FamilySearchLogo,
+          name: 'FamilySearch',
+          title: 'UX Designer',
+          date: 'Jun 2023 - Now',
+          description:' As a Family Search UX Designer, I led user research, ideated a web app for team progress tracking, and crafted an intuitive Figma prototype. My user-centered design enhances manager insights into team performance.'
+        }
+      },
       skills: {
           skillOne: {
             name: "JavaScript",

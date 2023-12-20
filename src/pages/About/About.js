@@ -5,6 +5,7 @@ import ShuffleHero from "./ShuffleHero";
 
 import { useSpring, animated } from 'react-spring';
 import Skills from "./Skills";
+import Experience from "./Experience";
 
 
 export default function About({role}) {
@@ -89,7 +90,7 @@ export default function About({role}) {
                 </TabPanel>
 
                 <TabPanel>
-                
+                <Experience role={role}/>
                 </TabPanel>
 
                 <TabPanel>
