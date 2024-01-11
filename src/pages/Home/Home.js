@@ -3,25 +3,16 @@ import {
   Box,
 
 } from '@chakra-ui/react';
-import { Navigate, Outlet } from 'react-router-dom';
-import Hero from './Hero/Hero'
-import About from '../About/About';
 
+import Hero from '../Hero/Hero'
 
 export default function Home({ role }) {
 
 
   return (
-    <Box
-  
-    >
+    <Box>
 
-          <Hero
-      
-            role={role}
-          />
-
-          <About role={role}/>
+          <Hero role={role}/>
         
     </Box>
   )

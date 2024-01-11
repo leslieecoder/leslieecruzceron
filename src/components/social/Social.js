@@ -10,7 +10,7 @@ export default function Social() {
     top="50%"
     transform="translateY(-50%)"
     left={0}
-    right={10}
+    right={{base: "0", md: "10px"}}
     textAlign="right" 
     
     p={4}

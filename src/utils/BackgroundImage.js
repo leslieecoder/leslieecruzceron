@@ -23,7 +23,7 @@ export default function BackgroundImage() {
   options={{
     fullScreen: false,
     background: {
-      image: ' linear-gradient(19deg, #21D4FD 0%, #B721FF 100%)',
+      image: ' linear-gradient(19deg, #368FA4 0%, #B721FF 100%)',
     },
     particles: {
       number: {

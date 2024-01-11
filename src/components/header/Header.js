@@ -34,11 +34,6 @@ const Navbar = ({ role }) => {
       id: 'work'
     },
     {
-      label: 'Home',
-      icon: <FaHome/>,
-      id: 'home'
-    },
-    {
       label: 'Contact',
       icon: <FaMailBulk/>,
       id: 'contact'
@@ -50,11 +45,14 @@ const Navbar = ({ role }) => {
       color={role.color}
       alignItems="center"
       gap="10px"
-      bgColor={role.bgColor}
+      bgColor={role.headerBg}
       top="0"
       width="100%"
       paddingX={{ base: '40px', md: '150px' }}
       paddingY='2vh'
+      position='fixed'
+      zIndex={3}
+ 
    
     >
       <Flex alignItems="center" gap="10px"    zIndex='2'>
@@ -160,7 +158,7 @@ const Navbar = ({ role }) => {
       <Spacer />
 
       <Box
-        display={{ base: 'none', md: 'flex' }}
+        display={{ base: 'none', md: 'none', lg: 'flex'}}
         alignItems="center"
         fontFamily="Raleway"
         gap="25px"
@@ -197,7 +195,7 @@ const Navbar = ({ role }) => {
         </Button>
       </Box>
 
-      <Box display={{ base: 'flex', md: 'none' }}>
+      <Box display={{ base: 'flex', md: 'flex', lg: 'none'}}>
 
         <IconButton
           ref={btnRef}
@@ -225,13 +223,10 @@ const Navbar = ({ role }) => {
   <Stack spacing="2" align='center'>
  
     <Link mb="2" color="white" href="#home">
-      Home
+      About Me
     </Link>
     <Link mb="2" color="white" href="#about">
-      About
-    </Link>
-    <Link mb="2" color="white" href="#services">
-      Services
+      Work
     </Link>
     <Link   mb="2" color="white" href="#contact">
       Contact

@@ -3,12 +3,12 @@ import React from 'react'
 
 export default function Skills({role}) {
   return (
-    <Grid templateColumns='repeat(2, 1fr)' gap={6}>
-<Box>
+    <Grid  marginTop='5vh' color="white" templateColumns='repeat(2, 1fr)' gap={6}>
+<Box color="white" >
 
     <Flex alignItems='center' gap="10px">       
         {role.skills.skillOne.icon}
-        <Text>{role.skills.skillOne.name}</Text>    
+        <Text >{role.skills.skillOne.name}</Text>    
     </Flex>
     
     {role.skills.skillOne.progress}

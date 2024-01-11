@@ -104,7 +104,7 @@ const ShuffleGrid = () => {
     timeoutRef.current = setTimeout(shuffleSquares, 3000);
   };
 
-  return <Box zIndex={1} display="grid" gridTemplateColumns="repeat(3, 1fr)" gridTemplateRows="repeat(3, 1fr)" w='500px' h="500px" gap={1}>{squares.map((sq) => sq)}</Box>;
+  return <Box zIndex={1} display="grid" gridTemplateColumns="repeat(3, 1fr)" gridTemplateRows="repeat(3, 1fr)" w={{ base: '250px', md: '500px' }} h={{ base: '250px', md: '500px' }} gap={1}>{squares.map((sq) => sq)}</Box>;
 };
 
 export default ShuffleHero;

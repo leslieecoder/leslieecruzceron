@@ -1,11 +1,12 @@
 import React, { useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion";
 import { Box, Text, Tab, Tabs, TabList, TabPanel, TabPanels, Flex, Center, Image, Button, Progress} from '@chakra-ui/react';
-import ShuffleHero from "./ShuffleHero";
+
 
 import { useSpring, animated } from 'react-spring';
-import Skills from "./Skills";
+import Skills from '../About/Skills'
 import Experience from "./Experience";
+import { GiHeartWings } from "react-icons/gi";
 
 
 export default function About({role}) {
@@ -20,17 +21,23 @@ export default function About({role}) {
 
 
   return (
-    <Box zIndex={1} width="100vw" height="100vh" marginX="10vw">
-      <Flex
-      alignItems="center"
-      >
+    <Box zIndex={1}  marginX="15vw" textAlign='center'>
+  
          <animated.div style={LettersProps}>
-        <Box zIndex={1}
-       w="40vw"
+        <Box 
+         height="100vh"
+         zIndex={1}
         >
-          <Box
-          marginTop="10vh"
-          >
+
+
+          <Box marginTop="5vh">
+            {/* About me title */}
+            <Center>
+            <GiHeartWings color="white" size='10%' />
+
+            </Center>
+         
+
             <Text
               style={{
                 fontFamily: 'Raleway',
@@ -74,23 +81,23 @@ export default function About({role}) {
               </Text>
             </Box>
           </Box>
-          <Box
-          my="5vh"
-          >
-            <Tabs color='white' isFitted colorScheme="purple">
+
+          <animated.div style={LettersProps}>
+         <Box my="5vh" >
+            <Tabs variant='soft-rounded' isFitted colorScheme='pink'>
               <TabList>
-                <Tab color="pink">💅 Skills</Tab>
-                <Tab color="">💼 Experience</Tab>
-                <Tab color="white">👩🏻‍🎓 Education</Tab>
-                <Tab color="white">💖 Hobbies</Tab>
+                <Tab color="white">💅 Skills</Tab>
+                <Tab color="white">💼 Experience</Tab>
+
               </TabList>
               <TabPanels>
+                
                 <TabPanel>
-                  <Skills role={role}/>
+                  <Skills role={role}/> 
                 </TabPanel>
 
                 <TabPanel>
-                <Experience role={role}/>
+              <Experience role={role}/> 
                 </TabPanel>
 
                 <TabPanel>
@@ -99,14 +106,15 @@ export default function About({role}) {
               </TabPanels>
             </Tabs>
           </Box>
+        </animated.div> 
+       
+         
           
         </Box>
         </animated.div>
-        <animated.div style={LettersProps}>
-        <ShuffleHero/>
-        </animated.div>
-       
-      </Flex>
+
+         
+     
     </Box>
   );
 }
