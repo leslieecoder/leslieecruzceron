@@ -7,12 +7,11 @@ import {
   Button
 
 } from '@chakra-ui/react';
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-scroll';
 
 
 import { useSpring, animated } from 'react-spring';
-import About from '../About/About'
 
 export default function Hero({role,}) {
 

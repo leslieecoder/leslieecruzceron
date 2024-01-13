@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useRef} from 'react';
-import { ChakraProvider,Progress, theme, Box } from '@chakra-ui/react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useState, useEffect} from 'react';
+import { ChakraProvider,Progress, theme } from '@chakra-ui/react';
 import UxImage from './assets/lesHero.png';
 import WdImage from './assets/heroLesWD.png';
 import Loader from './components/loader/Loader';
@@ -12,8 +11,9 @@ import ToggleButton from './pages/Hero/ToggleButton';
 import Social from './components/social/Social'
 import About from './pages/About/About';
 import {FaFigma, FaAdobe, FaInvision, FaUser, FaCog, FaBook } from 'react-icons/fa';
-import { DiIllustrator, DiPhotoshop } from "react-icons/di";
-import { FaJs, FaReact, FaHtml5, FaCss3, FaGit, FaNodeJs, FaDatabase, FaServer, FaDatabase as FaMongoDb, FaDatabase as FaSql, FaAws, FaPython } from 'react-icons/fa';
+import { DiIllustrator} from "react-icons/di";
+import { FaJs, FaReact, FaHtml5, FaCss3, FaGit, FaNodeJs, FaServer } from 'react-icons/fa';
+
 import FamilySearchLogo from './assets/familySearch.png'
 import ChurchLogo from './assets/church-logo.png'
 import ByuiLogo from './assets/byui-logo.png'
@@ -231,7 +231,7 @@ function App() {
           },
           skillEight: {
             name: "MongoDB & SQL",
-            icon: <FaMongoDb />,
+            icon: <FaServer />,
             progress: <Progress my='10px' hasStripe value={50} colorScheme='purple' />,
           },
       

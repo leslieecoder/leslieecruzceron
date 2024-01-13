@@ -1,9 +1,5 @@
 import React from "react"
-import { Box, Text,  Center,   FormControl,
-    FormLabel,
-    Textarea,
-    Input,
-    Button
+import { Box, Text,  Center,
 } from '@chakra-ui/react';
 import { useSpring, animated } from 'react-spring';
 import { IoMdContacts } from "react-icons/io";

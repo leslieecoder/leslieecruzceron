@@ -14,9 +14,6 @@ const Loader = () => {
     <Box
       bg="pink.300"
       style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
         height: '100vh',
         background: 'black',
         display: 'flex',

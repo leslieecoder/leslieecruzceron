@@ -8,7 +8,6 @@ import {
   Box,
   Text,
   Image,
-  Center,
   Stack
 } from '@chakra-ui/react';
 import { useForm, ValidationError } from '@formspree/react';

@@ -14,8 +14,6 @@ import {
 
 } from '@chakra-ui/react'
 
-import { MinusIcon, AddIcon } from '@chakra-ui/icons'
-
 export default function Experience({role}) {
   return (
 <Accordion  marginTop='5vh' color="white" allowMultiple>

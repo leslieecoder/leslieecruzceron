@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from "react"
-import { motion } from "framer-motion";
-import { Box, Text, Tab, Tabs, TabList, TabPanel, TabPanels, Flex, Center, Image, Button, Progress} from '@chakra-ui/react';
+import React from "react"
+
+import { Box, Text, Tab, Tabs, TabList, TabPanel, TabPanels, Center} from '@chakra-ui/react';
 
 
 import { useSpring, animated } from 'react-spring';

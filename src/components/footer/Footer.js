@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Text } from '@chakra-ui/react'
-import { FaHeart } from "react-icons/fa";
+
 
 export default function Footer({role}) {
   return (
