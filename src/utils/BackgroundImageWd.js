@@ -19,7 +19,7 @@ export default function BackgroundImageWd() {
                 init={particlesInit}
                 loaded={particlesLoaded}
                 options={{
-                    fullScreen: false,
+                    fullScreen: true,
                   
                     particles: {
                         number: {

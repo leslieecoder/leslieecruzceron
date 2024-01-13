@@ -8,12 +8,13 @@ import {
 
 } from '@chakra-ui/react';
 import React, { useState } from 'react';
+import { Link } from 'react-scroll';
 
 
 import { useSpring, animated } from 'react-spring';
 import About from '../About/About'
 
-export default function Hero({role}) {
+export default function Hero({role,}) {
 
 
   const ImageProps = useSpring({
@@ -36,9 +37,9 @@ export default function Hero({role}) {
       <Box
         transition="background-color 0.3s, color 0.3s"
         paddingX={{ base: '10px', md: '100px' }}
-        height='100vh'
+        height='90vh'
         marginX='10vh'
-        marginTop='10vh'
+        marginTop='20vh'
       
       >
       
@@ -161,7 +162,9 @@ export default function Hero({role}) {
               >
                 {role?.heroText3}
               </Text>
-              <Button > Let's Talk!</Button>
+              <Link to="contact" smooth={true} duration={500}>
+                <Button paddingX='2vw' colorScheme='yellow' > Let's Talk!</Button>
+              </Link>
 
               
             </Box>

@@ -4,7 +4,7 @@ import {
   Text, 
   Center,
 } from '@chakra-ui/react'
-import Cards from './Cards'
+
 import { GiStarsStack } from "react-icons/gi";
 import Project from './Project';
 
@@ -12,17 +12,19 @@ import Project from './Project';
 export default function Work({role}) {
 
   return (
-    <Center>
+    <Center  >
+
     <Box
     zIndex={1}
-    marginX='5vw'
     textAlign='center'
     marginBottom='15vh'
-  
+    name="work"
     >
-      <Box marginBottom='10vh'>
+      <Box
+      marginBottom='10vh'>
+
         <Center>
-        <GiStarsStack color='white' size='10%' />
+        <GiStarsStack color='white' size='10vw' />
         </Center>
       
       <Text
@@ -33,6 +35,7 @@ export default function Work({role}) {
               }}
               color="pink.100"
               as="b"
+              
               fontSize={{ base: '3xl', md: '6xl' }}
               zIndex={1}
             >
@@ -64,7 +67,7 @@ export default function Work({role}) {
      
         <Box>
 
-          {/* <Cards  role={role}/> */}
+
           <Project role={role}/>
        
         </Box>

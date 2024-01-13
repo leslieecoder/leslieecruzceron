@@ -87,7 +87,7 @@ export default function Experience({role}) {
       <AccordionButton>
         <Box as="span" flex='1' textAlign='left'>
          <Flex gap='10px' alignItems='center'>
-         <Image margin='1vh' width='5%' src={role.experience.experienceFour.logo}/>
+         <Image margin='1vh' width='5vh' src={role.experience.experienceFour.logo}/>
           <Text color='white' as='b'> {role.experience.experienceFour.name} </Text>
           <Text> {role.experience.experienceFour.title} </Text>
           

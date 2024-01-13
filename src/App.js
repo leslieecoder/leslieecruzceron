@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef} from 'react';
 import { ChakraProvider,Progress, theme, Box } from '@chakra-ui/react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import UxImage from './assets/lesHero.png';
@@ -21,10 +21,15 @@ import StackPro from './assets/stackProp-lap.png'
 import Vima from './assets/Vima-lap.png'
 import Metrics from './assets/manager-lap.png'
 import Work from './pages/Work/Work';
+import Contact from './pages/Contact./Contact';
+import Footer from './components/footer/Footer';
+
 
 
 
 function App() {
+
+
 
   const role = {
     uxDesigner: {
@@ -32,7 +37,7 @@ function App() {
       colorButton: '#B721FF',
       color: 'white',
       bgColor: '#B429FF',
-      headerBg: 'rgba(183, 33, 255, 0.5)',
+      headerBg: 'rgba(255, 255, 255, 0.1)',
       heroText1: 'a UX Designer on a mission to create',
       heroText2: 'Intuitive & Beautiful',
       heroText3: 'Digital Experiences.',
@@ -77,42 +82,42 @@ function App() {
         skillOne: {
             name: "Figma",
             icon:  <FaFigma  />,
-            progress: <Progress my='10px' hasStripe value={100} colorScheme='pink'/>
+            progress: <Progress my='10px' hasStripe value={100} colorScheme='yellow'/>
           },
           skillTwo: {
             name: "Adobe XD",
             icon: <FaAdobe />,
-            progress: <Progress my='10px' hasStripe value={80} colorScheme='pink' />,
+            progress: <Progress my='10px' hasStripe value={80} colorScheme='yellow' />,
           },
           skillThree: {
             name: "Illustrator",
             icon: <DiIllustrator />,
-            progress: <Progress my='10px' hasStripe value={70} colorScheme='pink' />,
+            progress: <Progress my='10px' hasStripe value={70} colorScheme='yellow' />,
           },
           skillFour: {
             name: "Design Systems",
             icon: <FaBook />,
-            progress: <Progress my='10px' hasStripe value={90} colorScheme='pink' />,
+            progress: <Progress my='10px' hasStripe value={90} colorScheme='yellow' />,
           },
           skillFive: {
             name: "Invision",
             icon: <FaInvision />,
-            progress: <Progress my='10px' hasStripe value={70} colorScheme='pink' />,
+            progress: <Progress my='10px' hasStripe value={70} colorScheme='yellow' />,
           },
           skillSix: {
             name: "Prototyping",
             icon: <FaCog />,
-            progress: <Progress my='10px' hasStripe value={90} colorScheme='pink' />,
+            progress: <Progress my='10px' hasStripe value={90} colorScheme='yellow'/>,
           },
           skillSeven: {
             name: "User Testing",
             icon: <FaUser />,
-            progress: <Progress my='10px' hasStripe value={90} colorScheme='pink' />,
+            progress: <Progress my='10px' hasStripe value={90} colorScheme='yellow' />,
           },
           skillEight: {
             name: "Design Thinking",
             icon: <FaBook />,
-            progress: <Progress my='10px' hasStripe value={95} colorScheme='pink' />,
+            progress: <Progress my='10px' hasStripe value={95} colorScheme='yellow'/>,
           },
    
       
@@ -122,16 +127,19 @@ function App() {
       projectOne: {
         image: StackPro,
         name: 'StackPro+UX',
+        caseStudylink: 'https://www.behance.net/gallery/166118801/StackProUX-Web-Ap-UX-Design-Case-Study?tracking_source=search_projects&l=0',
         description: 'StackPro is an innovative online learning platform dedicated to the world of fullstack development. Its uniquely designed to bridge the gap between development and design, offering a comprehensive curriculum that equips learners with the skills needed to excel as proficient fullstack developers.'
       },
       projectTwo: {
         image: Vima,
         name: 'Vima',
+        caseStudyLink:'https://www.behance.net/gallery/166473389/VIMA-Web-App-UX-DESIGN-CASE-STUDY-Virtual-Machine?tracking_source=project_owner_other_projects',
         description: 'A cool description of the project'
       },
       projectThree: {
         image: Metrics,
         name: 'Manager Metrics',
+        caseStudyLink:'https://www.behance.net/gallery/166473389/VIMA-Web-App-UX-DESIGN-CASE-STUDY-Virtual-Machine?tracking_source=project_owner_other_projects',
         description: 'A cool description of the project'
       }
     }
@@ -144,7 +152,7 @@ function App() {
       colorButton: 'purple',
       color: 'white',
       bgColor: '#171923',
-      headerBg: '#171923',
+      headerBg: 'rgba(255, 255, 255, 0.1)',
       heroText1: 'a Web Dev on a mission to develop',
       heroText2: 'Dynamic & Stunning',
       heroText3: 'Web Solutions.',
@@ -233,22 +241,22 @@ projects: {
   projectOne: {
     image: StackPro,
     name: 'StackPro+UX',
-    description: 'A cool description of the project',
-    link: 'https://www.behance.net/gallery/166118801/StackProUX-Web-Ap-UX-Design-Case-Study?tracking_source=project_owner_other_projects'
+    caseStudylink: 'https://www.behance.net/gallery/166118801/StackProUX-Web-Ap-UX-Design-Case-Study?tracking_source=search_projects&l=0',
+    description: 'StackPro is an innovative online learning platform dedicated to the world of fullstack development. Its uniquely designed to bridge the gap between development and design, offering a comprehensive curriculum that equips learners with the skills needed to excel as proficient fullstack developers.'
   },
   projectTwo: {
     image: Vima,
     name: 'Vima',
-    description: 'A cool description of the project',
-    link: 'https://www.behance.net/gallery/166473389/VIMA-Web-App-UX-DESIGN-CASE-STUDY-Virtual-Machine'
+    caseStudyLink:'https://www.behance.net/gallery/166473389/VIMA-Web-App-UX-DESIGN-CASE-STUDY-Virtual-Machine?tracking_source=project_owner_other_projects',
+    description: 'A cool description of the project'
   },
   projectThree: {
     image: Metrics,
     name: 'Manager Metrics',
+    caseStudyLink:'https://www.behance.net/gallery/166473389/VIMA-Web-App-UX-DESIGN-CASE-STUDY-Virtual-Machine?tracking_source=project_owner_other_projects',
     description: 'A cool description of the project'
   }
 }
-
 
     },
   };
@@ -256,7 +264,7 @@ projects: {
  
 
   const [currentRole, setCurentRole] = useState('uxDesigner');
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -292,19 +300,32 @@ projects: {
         
 
         <Header role={role[currentRole]} />
+
         <ToggleButton onChange={handleSwitchRole} isChecked={currentRole === 'webDeveloper'} />
         <Social/>
      
-         <Home
+         <Home 
                 role={role[currentRole]}
                 currentRole={currentRole}
                 handleSwitchRole={handleSwitchRole}
+                
               />
-         <About  role={role[currentRole]}
-                currentRole={currentRole}/>
+
+
+          
+         <About  name="about" id="about" role={role[currentRole]}
+                currentRole={currentRole}
+          
+             />
         
           <Work role={role[currentRole]}
                 currentRole={currentRole}/>
+
+          <Contact  role={role[currentRole]}
+                currentRole={currentRole}/>  
+
+          <Footer role={role[currentRole]}
+                currentRole={currentRole}/>          
 
      
         

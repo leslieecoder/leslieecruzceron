@@ -8,7 +8,7 @@ export default function ToggleButton({onChange, isChecked}) {
     <Center>
     <Flex
       position="fixed"
-      bottom={5}
+      bottom={10}
       left={0}
       right={0}
       justifyContent="center"
@@ -24,7 +24,7 @@ export default function ToggleButton({onChange, isChecked}) {
       boxShadow='md'
       backdropFilter='auto' 
       backdropBlur='8px'
-      style={{ background: 'rgba(255, 255, 255, 0.4)' }}
+      style={{ background: 'rgba(255, 255, 255, 0.1)' }}
       
       
       >

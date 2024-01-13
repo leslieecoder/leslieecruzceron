@@ -21,9 +21,9 @@ export default function BackgroundImage() {
   init={particlesInit}
   loaded={particlesLoaded}
   options={{
-    fullScreen: false,
+    fullScreen: true,
     background: {
-      image: ' linear-gradient(19deg, #368FA4 0%, #B721FF 100%)',
+      image: ' linear-gradient(19deg, #AA336A 0%, #B721FF 100%)',
     },
     particles: {
       number: {

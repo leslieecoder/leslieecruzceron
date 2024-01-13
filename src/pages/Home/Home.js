@@ -6,13 +6,13 @@ import {
 
 import Hero from '../Hero/Hero'
 
-export default function Home({ role }) {
+export default function Home({ role, scrollToComponent }) {
 
 
   return (
     <Box>
 
-          <Hero role={role}/>
+          <Hero scrollToComponent={scrollToComponent} role={role}/>
         
     </Box>
   )
