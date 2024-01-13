@@ -10709,13 +10709,6 @@
     "ws" "^6.2.2"
     "yargs" "^17.6.2"
 
-"react-particles@^2.12.2":
-  "integrity" "sha512-Bo9DdrBRPFy8uiT7BA8P36Rdmz6GhB/RG9kkWUyZGIsS8AxWyuUjpVxw9Lr23K0LVE2aenAJ0vnqEbbLDpBgQw=="
-  "resolved" "https://registry.npmjs.org/react-particles/-/react-particles-2.12.2.tgz"
-  "version" "2.12.2"
-  dependencies:
-    "tsparticles-engine" "^2.12.0"
-
 "react-reconciler@^0.27.0":
   "integrity" "sha512-HmMDKciQjYmBRGuuhIaKA1ba/7a+UsM5FzOZsMO2JYHt9Jh8reCb7j1eDC95NOyUlKM9KRyvdx0flBuDvYSBoA=="
   "resolved" "https://registry.npmjs.org/react-reconciler/-/react-reconciler-0.27.0.tgz"
