@@ -34,6 +34,7 @@ export default function Hero({role,}) {
 
 
       <Box
+      name="home"
         transition="background-color 0.3s, color 0.3s"
         paddingX={{ base: '10px', md: '100px' }}
         height='90vh'
@@ -161,7 +162,7 @@ export default function Hero({role,}) {
               >
                 {role?.heroText3}
               </Text>
-              <Link to="contact" smooth={true} duration={500}>
+              <Link to="contact" offset={-150} smooth={true} duration={500}>
                 <Button paddingX='2vw' colorScheme='yellow' > Let's Talk!</Button>
               </Link>
 

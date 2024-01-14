@@ -23,6 +23,8 @@ import Metrics from './assets/manager-lap.png'
 import Work from './pages/Work/Work';
 import Contact from './pages/Contact./Contact';
 import Footer from './components/footer/Footer';
+import UxPdf from './pdf/Lesliee-Cruz-UX-Resume.pdf'
+import WdPdf  from './pdf/Lesliee-Cruz-WD-Resume.pdf'
 
 
 
@@ -43,6 +45,8 @@ function App() {
       heroText3: 'Digital Experiences.',
       lesColorHero: '#FAF089',
       fontHeader: 'Cookie',
+      resume:UxPdf,
+      resumeDownload: 'Lesliee-Cruz-UX-Resume.pdf',
       fontSizeLogo: { base: '4xl', md: '5xl' },
       toggleColor: '#FAF089',
       experience: {
@@ -134,16 +138,15 @@ function App() {
         image: Vima,
         name: 'Vima',
         caseStudyLink:'https://www.behance.net/gallery/166473389/VIMA-Web-App-UX-DESIGN-CASE-STUDY-Virtual-Machine?tracking_source=project_owner_other_projects',
-        description: 'A cool description of the project'
+        description: 'VIMA is a web application designed to assist professors in creating virtual machines for their classes, simplifying the process for students to create virtual machines for their coursework. The app will allow professors to create classes and assign a virtual machine to each class. Students will then be able to access the app, select the appropriate class, and create the virtual machine for their coursework.'
       },
       projectThree: {
         image: Metrics,
         name: 'Manager Metrics',
         caseStudyLink:'https://www.behance.net/gallery/166473389/VIMA-Web-App-UX-DESIGN-CASE-STUDY-Virtual-Machine?tracking_source=project_owner_other_projects',
-        description: 'A cool description of the project'
+        description: 'M&M is an  app designed to assess and monitor the performance of managers within an organization. The app helps businesses evaluate managerial skills, identify areas for improvement, and track progress over time.  '
       }
     }
-    
 
     },
 
@@ -160,6 +163,8 @@ function App() {
       fontHeader: ' VT323',
       fontSizeLogo: { base: '4xl', md: '5xl' },
       toggleColor: '#D6BCFA',
+      resume:WdPdf,
+      resumeDownload: 'Lesliee-Cruz-WD-Resume.pdf',
       experience: {
         experienceOne: {
           logo: FamilySearchLogo,
@@ -248,13 +253,13 @@ projects: {
     image: Vima,
     name: 'Vima',
     caseStudyLink:'https://www.behance.net/gallery/166473389/VIMA-Web-App-UX-DESIGN-CASE-STUDY-Virtual-Machine?tracking_source=project_owner_other_projects',
-    description: 'A cool description of the project'
+    description: 'VIMA is a web application designed to assist professors in creating virtual machines for their classes, simplifying the process for students to create virtual machines for their coursework. The app will allow professors to create classes and assign a virtual machine to each class. Students will then be able to access the app, select the appropriate class, and create the virtual machine for their coursework.'
   },
   projectThree: {
     image: Metrics,
     name: 'Manager Metrics',
     caseStudyLink:'https://www.behance.net/gallery/166473389/VIMA-Web-App-UX-DESIGN-CASE-STUDY-Virtual-Machine?tracking_source=project_owner_other_projects',
-    description: 'A cool description of the project'
+    description: 'M&M is an  app designed to assess and monitor the performance of managers within an organization. The app helps businesses evaluate managerial skills, identify areas for improvement, and track progress over time.  '
   }
 }
 

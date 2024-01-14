@@ -34,7 +34,7 @@ export default function About({role}) {
           <Box marginTop="5vh">
             {/* About me title */}
             <Center>
-            <IoMdContacts color="white" size='5vw' />
+            <IoMdContacts color="white" size='4vw' />
 
             </Center>
          
@@ -80,7 +80,7 @@ export default function About({role}) {
               >Got an idea or question? Shoot me a message! I'm always up for a good chat about cool projects and tech stuff. Let's make something awesome happen. </Text>
             </Box>
           </Box>
-          <Box h='60vh' marginX='10vw' marginY='10vh' bg='rgba(0, 0, 0, 0.1)' padding='3vw' rounded='lg'   backdropFilter='auto' 
+          <Box h='60vh' marginX={{base:'2vw', md:'10vw'}} marginY='10vh' bg='rgba(0, 0, 0, 0.1)' padding='3vw' rounded='lg'   backdropFilter='auto' 
     backdropBlur='8px' >
           <ContactForm/>
             

@@ -9,8 +9,8 @@ export default function Footer({role}) {
     bgColor={role.headerBg}
     height='10vh'
     width="100%"
-    paddingX={{ base: '10vwpx', md: '20vw' }}
-    paddingY='5vh'
+    paddingX={{ base: '10vw', md: '20vw' }}
+    paddingY={{ base: '7vw', md: '5vw' }}
     zIndex={3}
     boxShadow='md'
     backdropFilter='auto' 
@@ -18,7 +18,7 @@ export default function Footer({role}) {
     textAlign='center'
     >
  
-      <Text>© 2024 Developed with love 🤍 by Lesliee Cruz. All Rights Reserved.</Text>
+      <Text fontSize={{base: 'xs'}}>© 2024 Developed with love 🤍 by Lesliee Cruz. All Rights Reserved.</Text>
 
     </Box>
   )

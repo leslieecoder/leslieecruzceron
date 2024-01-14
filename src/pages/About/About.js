@@ -21,7 +21,7 @@ export default function About({role}) {
 
 
   return (
-    <Box zIndex={1} marginBottom='30vh'  marginX="15vw" textAlign='center' name="about">
+    <Box zIndex={1} marginY='30vh'  marginX="15vw" textAlign='center' name="about">
   
          <animated.div style={LettersProps}>
         <Box 
@@ -33,7 +33,7 @@ export default function About({role}) {
           <Box marginTop="5vh">
             {/* About me title */}
             <Center>
-            <GiHeartWings color="white" size='10vw' />
+            <GiHeartWings color="white" size='6vw' />
 
             </Center>
          

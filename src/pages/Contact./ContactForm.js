@@ -23,7 +23,7 @@ export default function ContactForm() {
 
   if (state.succeeded) {
     return (
-      <Box textAlign='center' p="4">
+      <Box textAlign='center' p="5vw">
    
         <Stack >
         <Image style={imageStyles} borderRadius='full' bg='pink' boxSize='200px' src={Pug}/>
@@ -55,6 +55,7 @@ export default function ContactForm() {
           name="message"
           color="white"
           borderColor="purple.200"
+          h='20vh'
         />
         <ValidationError
           prefix="Message"
@@ -67,7 +68,7 @@ export default function ContactForm() {
         colorScheme="purple"
         mt="4"
         type="submit"
-        marginY='5vh'
+        marginY='7vh'
         disabled={state.submitting}
       >
         Say hi! 👋

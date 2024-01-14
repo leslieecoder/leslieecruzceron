@@ -17,14 +17,18 @@ export default function Work({role}) {
     <Box
     zIndex={1}
     textAlign='center'
+    marginX='5vw'
     marginBottom='15vh'
     name="work"
     >
       <Box
-      marginBottom='10vh'>
+      marginBottom='10vh'
+      marginX={{base: '5vw', md: '10vw'}}
+      
+      >
 
         <Center>
-        <GiStarsStack color='white' size='10vw' />
+        <GiStarsStack color='white' size='5vh' />
         </Center>
       
       <Text
@@ -60,7 +64,7 @@ export default function Work({role}) {
               {' '}
               Three Projects
             </Text>
-            <Text  marginX='15vw' color='white'> Hey there! I've been in the UX design and development game for about four years now, and it's been a wild ride full of awesome projects. I've pretty much done a bit of everything, but I gotta say, there are a few projects that really stand out. These top three are my favorites – they're not just about great design and cool tech, but also about the fun and challenges I had along the way. Check them out!</Text>
+            <Text  marginX='15vw' color='white'> These top three are my favorites projects they're not just about great design and cool tech, but also about the fun and challenges I had along the way. Check them out!</Text>
 
             </Box>
 

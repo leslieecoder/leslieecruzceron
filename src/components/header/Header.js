@@ -13,10 +13,12 @@ import {
   DrawerCloseButton,
   DrawerHeader,
   DrawerBody,
-  Stack
+  Stack,
+  Center
 } from '@chakra-ui/react';
 import { FaBars, FaArrowRight, FaDownload, FaHome, FaImages, FaMailBulk } from 'react-icons/fa';
 import { Link } from 'react-scroll';
+
 
 
 
@@ -26,6 +28,11 @@ const Navbar = ({ role }) => {
 
   const links = [
     {
+      label: 'Home',
+      icon: <FaHome/>,
+      id: 'home'
+    },
+    {
       label: 'About Me',
       icon: <FaHome/>,
       id: 'about'
@@ -34,11 +41,6 @@ const Navbar = ({ role }) => {
       label: 'Work',
       icon: <FaImages/>,
       id: 'work'
-    },
-    {
-      label: 'Contact',
-      icon: <FaMailBulk/>,
-      id: 'contact'
     }
   ]
 
@@ -174,24 +176,29 @@ const Navbar = ({ role }) => {
       align='center'
       gap='5px'
       >
-        <Link  mb="2" color="white" href="#home" to={link.id} smooth={true} duration={500}>
+        <Link  mb="2" color="white" href="#home" to={link.id} smooth={true} offset={-150} duration={500}>
           
           {link.label}
         </Link>
         </Flex>
 
     ))}
-  
+
+
        
+  
+    <a href={role.resume} download={role.resumeDownload} style={{ textDecoration: 'none' }}>
         <Button
           rightIcon={<FaDownload />}
           colorScheme={role.colorButton}
+          color='white'
           variant="outline"
         >
           Download Resume
         </Button>
+        </a>
 
-        <Link to="contact" smooth={true} duration={500}>
+        <Link to="contact" smooth={true} offset={-150} duration={500}>
           <Button
             colorScheme={role.colorButton}
             rightIcon={<FaArrowRight />}
@@ -227,24 +234,28 @@ const Navbar = ({ role }) => {
 
               
               <DrawerBody>
-  <Stack spacing="2" align='center'>
+            
+  <Stack spacing="3vh" align='center'>
  
-    <Link mb="2" color="white" href="#home" to="about" smooth={true} duration={500} onClick={onClose}>
+    <Link mb="2" color="white" href="#home" to="about" offset={-150} smooth={true} duration={500} onClick={onClose}>
       About Me
     </Link>
-    <Link mb="2" color="white" href="#about" to="work" smooth={true} duration={500} onClick={onClose}>
+    <Link mb="2" color="white" href="#about" to="work" smooth={true} offset={-150} duration={500} onClick={onClose}>
       Work
     </Link>
-    <Link   mb="2" color="white" href="#contact" to="contact" smooth={true} duration={500} onClick={onClose}>
+    <Link   mb="2" color="white" href="#contact" to="contact" smooth={true} offset={-150} duration={500} onClick={onClose}>
       Contact
     </Link>
-    <Button
-      rightIcon={<FaDownload />}
-      colorScheme={role.colorButton}
-      variant="outline"
-    >
-      Download Resume
-    </Button>
+    <a href={role.resume} download={role.resumeDownload} style={{ textDecoration: 'none' }}>
+        <Button
+          rightIcon={<FaDownload />}
+          colorScheme={role.colorButton}
+          color='white'
+          variant="outline"
+        >
+          Download Resume
+        </Button>
+        </a>
     <Link to="contact" smooth={true} duration={500} onClick={onClose}>
       <Button
         colorScheme={role.colorButton}
@@ -255,6 +266,7 @@ const Navbar = ({ role }) => {
       </Button>
     </Link>
   </Stack>
+ 
 </DrawerBody>
              
             </DrawerContent>
