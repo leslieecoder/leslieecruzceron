@@ -13,10 +13,9 @@ import {
   DrawerCloseButton,
   DrawerHeader,
   DrawerBody,
-  Stack,
-  Center
+  Stack
 } from '@chakra-ui/react';
-import { FaBars, FaArrowRight, FaDownload, FaHome, FaImages, FaMailBulk } from 'react-icons/fa';
+import { FaBars, FaArrowRight, FaDownload, FaHome, FaImages} from 'react-icons/fa';
 import { Link } from 'react-scroll';
 
 
