@@ -20,7 +20,7 @@ export default function Hero({role,}) {
     opacity: 1,
     transform: 'scale(1)',
     from: { opacity: 0, transform: 'scale(0.8)' },
-    delay: 800,
+    delay:300
   });
 
   const LettersProps = useSpring({
@@ -52,15 +52,13 @@ export default function Hero({role,}) {
         >
 
             <animated.div
-                style={{
-                  ...ImageProps,
-                  order: { base: 2, md: 1 }, 
-                }}
+                style={{...ImageProps }}
               >
           <Center width="100%">
             <Image
               boxSize={{ base: '100%', md: '80%' }}
               minWidth='50%'
+               
               maxWidth='80%'
               objectFit="cover"
               marginY='5vh'
