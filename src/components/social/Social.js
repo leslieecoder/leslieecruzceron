@@ -24,8 +24,9 @@ export default function Social() {
     
     <SocialIcon bgColor= 'transparent' url="https://www.linkedin.com/in/lesliee-cruz-ceron/" />
     <SocialIcon bgColor= 'transparent' url="https://www.youtube.com/@leslieecruz3650/videos" />
-    <SocialIcon bgColor= 'transparent' url="https://github.com/Lessleya" />
-    <SocialIcon bgColor= 'transparent' url="https://www.instagram.com/lessleya/" />
+    <SocialIcon bgColor= 'transparent' url="https://github.com/leslieecoder" />
+    <SocialIcon bgColor= 'transparent' url="https://www.instagram.com/leslieecoder/" />
+    <SocialIcon bgColor= 'transparent' url="https://twitter.com/leslieecoder" />
     </Flex>
     </Box>
     </>

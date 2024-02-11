@@ -29,7 +29,7 @@ export default function BackgroundImageWd() {
                             },
                         },
                         color: {
-                            value: '#CB6CE6',
+                            value: '#5B0092',
                         },
                         shape: {
                             type: 'circle',
