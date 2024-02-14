@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { Box, Button, Heading, Text } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import PhotoOne from '../../assets/aboutGallery/photo1.jpeg';
 import PhotoTwo from '../../assets/aboutGallery/photo2.jpeg';
 import PhotoThree from '../../assets/aboutGallery/photo3.jpeg';
