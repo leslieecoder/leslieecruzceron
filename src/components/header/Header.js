@@ -18,7 +18,7 @@ import {
 } from '@chakra-ui/react';
 import { FaBars, FaArrowRight, FaDownload, FaHome, FaImages} from 'react-icons/fa';
 import { Link } from 'react-scroll';
-import Logo from '/Users/leslieecruz/lesliee-cruz-portfolio/src/assets/skills/logo-les.png'
+import Logo from './logo-les.png'
 
 
 

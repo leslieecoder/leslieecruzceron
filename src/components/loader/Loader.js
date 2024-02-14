@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Image } from '@chakra-ui/react';
 import { useSpring, animated, config } from 'react-spring';
-import Logo from '../../assets/skills/logo-les.png'
+import Logo from '../header/logo-les.png'
 
 const Loader = () => {
   const spin = useSpring({
