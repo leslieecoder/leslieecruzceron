@@ -1,5 +1,5 @@
 import React from 'react';
-import { SimpleGrid, Text, CardHeader, Heading, CardBody, CardFooter, Button, Card, Box, Center, List, ListIcon, ListItem } from '@chakra-ui/react';
+import { SimpleGrid, Text, CardHeader, Heading, CardBody, Card, Box, Center, List, ListIcon, ListItem } from '@chakra-ui/react';
 import { FaPencilRuler, FaCode, FaRocket, FaMagic } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { IoMdCheckmarkCircle } from 'react-icons/io';
