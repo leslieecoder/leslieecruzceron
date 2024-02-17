@@ -25,7 +25,8 @@ import Contact from './pages/Contact./Contact';
 import Footer from './components/footer/Footer';
 import UxPdf from './pdf/Lesliee-Cruz-UX-Resume.pdf'
 import WdPdf  from './pdf/Lesliee-Cruz-WD-Resume.pdf'
-
+import Services from './pages/Services/Services'
+// import RecentWork from './pages/RecentWork/RecentWork';
 
 
 
@@ -315,6 +316,10 @@ projects: {
                 handleSwitchRole={handleSwitchRole}
                 
               />
+
+          <Services name="about" id="about"/>
+
+          {/* <RecentWork/> */}
 
      
 
