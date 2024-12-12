@@ -1,3 +1,11 @@
+## Personal Portfolio
+This portfolio was built using React and styled with Tailwind CSS, providing a fast, responsive, and modern user experience. It showcases my projects, skills, and achievements with a clean and visually appealing design
+
+<img width="1701" alt="Screenshot 2024-12-11 at 10 09 38 PM" src="https://github.com/user-attachments/assets/708c943f-1dcd-4d52-9e55-2e7fd622242f" />
+
+<img width="1715" alt="Screenshot 2024-12-11 at 10 09 48 PM" src="https://github.com/user-attachments/assets/24c8ab29-d972-4aa0-b20c-24842ee8d8d8" />
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
