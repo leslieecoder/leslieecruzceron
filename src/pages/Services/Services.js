@@ -1,6 +1,6 @@
 import React from 'react';
 import { SimpleGrid, Image,  Text, CardHeader, Heading, CardBody, Card, Box, Center, List, ListIcon, ListItem } from '@chakra-ui/react';
-import { FaPencilRuler, FaCode, FaRocket, FaMagic } from 'react-icons/fa';
+import { FaMagic } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { IoMdCheckmarkCircle } from 'react-icons/io';
 import Branding from '../../assets/services/branding.png'

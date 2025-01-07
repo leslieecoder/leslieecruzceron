@@ -20,7 +20,6 @@ import ByuiLogo from './assets/byui-logo.png'
 import StackPro from './assets/stackProp-lap.png'
 import Vima from './assets/Vima-lap.png'
 import Metrics from './assets/manager-lap.png'
-import Work from './pages/Work/Work';
 import Contact from './pages/Contact./Contact';
 import Footer from './components/footer/Footer';
 import UxPdf from './pdf/Lesliee-Cruz-UX-Resume.pdf'
