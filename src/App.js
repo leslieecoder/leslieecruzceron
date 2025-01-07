@@ -26,6 +26,7 @@ import Footer from './components/footer/Footer';
 import UxPdf from './pdf/Lesliee-Cruz-UX-Resume.pdf'
 import WdPdf  from './pdf/Lesliee-Cruz-WD-Resume.pdf'
 import Services from './pages/Services/Services'
+import Projects from './pages/Projects/Projects'
 // import RecentWork from './pages/RecentWork/RecentWork';
 
 
@@ -319,6 +320,8 @@ projects: {
 
           <Services name="about" id="about"/>
 
+          <Projects name="projects" id="projects"/>
+
           {/* <RecentWork/> */}
 
      
@@ -329,8 +332,8 @@ projects: {
           
              />
         
-          <Work role={role[currentRole]}
-                currentRole={currentRole}/>
+          {/* <Work role={role[currentRole]}
+                currentRole={currentRole}/> */}
 
           <Contact  role={role[currentRole]}
                 currentRole={currentRole}/>  

@@ -1,8 +1,11 @@
 import React from 'react';
-import { SimpleGrid, Text, CardHeader, Heading, CardBody, Card, Box, Center, List, ListIcon, ListItem } from '@chakra-ui/react';
+import { SimpleGrid, Image,  Text, CardHeader, Heading, CardBody, Card, Box, Center, List, ListIcon, ListItem } from '@chakra-ui/react';
 import { FaPencilRuler, FaCode, FaRocket, FaMagic } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { IoMdCheckmarkCircle } from 'react-icons/io';
+import Branding from '../../assets/services/branding.png'
+import UXDesign from '../../assets/services/uxdesign.png'
+import WebDev from '../../assets/services/web-dev.png'
 
   // Animation variants for the cards
   const cardVariants = {
@@ -24,6 +27,8 @@ import { IoMdCheckmarkCircle } from 'react-icons/io';
 
 export default function Services() {
   return (
+
+    
     <Box  marginX="20vw" textAlign='center' name="about">
               <motion.div
           initial="offscreen"
@@ -32,6 +37,12 @@ export default function Services() {
           variants={cardVariants}
         ></motion.div>
     
+      <motion.div
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.8 }}
+          variants={cardVariants}
+        >
     <Box zIndex="1" position='relative' marginY="10vh">
             {/* About me title */}
             <Center>
@@ -84,7 +95,7 @@ export default function Services() {
             </Box>
             
           </Box>
-         
+         </motion.div>
  
     
       <SimpleGrid spacing="7vw" templateColumns='repeat(auto-fill, minmax(250px, 1fr))'>
@@ -98,43 +109,9 @@ export default function Services() {
         <Card  height='100%' variant='outline' _hover={{ transform: 'scale(1.05)', boxShadow: 'lg' }} transition="transform 0.2s, box-shadow 0.2s">
           <CardHeader>
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '2vh' }}>
-              <FaRocket size='25px' color='purple' /> 
+              <Image width='20vw' src={Branding}/>
             </div>
-            <Heading size='md'>Branding</Heading>
-          </CardHeader>
-          <CardBody>
-            <Text>I shape your brand so vibrant, eyes won't dare to blink! 👀</Text>
-            <List textAlign="left" py="2vh" spacing={3}>
-  <ListItem>
-    <ListIcon as={IoMdCheckmarkCircle} color='green.500' />
-   <strong>Logo Design </strong> 
-  </ListItem>
-  <ListItem>
-    <ListIcon as={IoMdCheckmarkCircle } color='green.500' />
-    <strong>Brand Strategy </strong> 
-  </ListItem>
-  <ListItem>
-    <ListIcon as={IoMdCheckmarkCircle } color='green.500' />
-    <strong>Identity Systems </strong> 
-  </ListItem>
-</List>
-          </CardBody>
-        </Card>
-        </motion.div>
-
-        <motion.div
-          initial="offscreen"
-          whileInView="onscreen"
-          viewport={{ once: true, amount: 0.8 }}
-          variants={cardVariants}
-        >
-        
-        <Card  height='100%' variant='outline' _hover={{ transform: 'scale(1.05)', boxShadow: 'lg' }} transition="transform 0.2s, box-shadow 0.2s">
-          <CardHeader>
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '2vh' }}>
-              <FaPencilRuler size='25px' color='purple'/>
-            </div>
-            <Heading  size='md'>UX Designer</Heading> 
+            <Heading color='purple' size='md' >Branding</Heading>
           </CardHeader>
           <CardBody>
             <Text>I create websites so engaging, your cursor will want to linger✨</Text>
@@ -152,10 +129,45 @@ export default function Services() {
                     <ListIcon as={IoMdCheckmarkCircle } color='green.500' />
                     <strong>Prototyping </strong> 
                 </ListItem>
+            
+                </List>
+            
+          </CardBody>
+         
+        </Card>
+        </motion.div>
+
+        <motion.div
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.8 }}
+          variants={cardVariants}
+        >
+        
+        <Card  height='100%' variant='outline' _hover={{ transform: 'scale(1.05)', boxShadow: 'lg' }} transition="transform 0.2s, box-shadow 0.2s">
+          <CardHeader>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '2vh' }}>
+            <Image width='20vw' src={UXDesign}/>
+            </div>
+            <Heading  size='md'>UX Design</Heading> 
+          </CardHeader>
+          <CardBody>
+            <Text>I create websites so engaging, your cursor will want to linger✨</Text>
+          
+            <List textAlign="left" py="2vh" spacing={3}>
+                <ListItem>
+                    <ListIcon as={IoMdCheckmarkCircle} color='green.500' />
+                <strong>User Research </strong> 
+                </ListItem>
                 <ListItem>
                     <ListIcon as={IoMdCheckmarkCircle } color='green.500' />
-                    <strong>Usability Testing </strong> 
+                    <strong>Wireframing  </strong> 
                 </ListItem>
+                <ListItem>
+                    <ListIcon as={IoMdCheckmarkCircle } color='green.500' />
+                    <strong>Prototyping </strong> 
+                </ListItem>
+            
                 </List>
             
           </CardBody>
@@ -173,7 +185,7 @@ export default function Services() {
         <Card height='100%' variant='outline' _hover={{ transform: 'scale(1.05)', boxShadow: 'lg' }} transition="transform 0.2s, box-shadow 0.2s">
           <CardHeader>
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '2vh' }}>
-              <FaCode size='25px' color='purple'/>
+            <Image width='20vw' src={WebDev}/>
             </div>
             <Heading size='md'>Web Development</Heading>
           </CardHeader>
@@ -186,7 +198,7 @@ export default function Services() {
                 </ListItem>
                 <ListItem>
                     <ListIcon as={IoMdCheckmarkCircle } color='green.500' />
-                    <strong>  Fullstack Applications</strong> 
+                    <strong>Fullstack Applications</strong> 
                 </ListItem>
                 <ListItem>
                     <ListIcon as={IoMdCheckmarkCircle } color='green.500' />
