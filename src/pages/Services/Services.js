@@ -114,20 +114,20 @@ export default function Services() {
             <Heading color='purple' size='md' >Branding</Heading>
           </CardHeader>
           <CardBody>
-            <Text>I create websites so engaging, your cursor will want to linger✨</Text>
+            <Text>Let’s craft a brand that turns heads and leaves lasting impressions.✨</Text>
           
             <List textAlign="left" py="2vh" spacing={3}>
                 <ListItem>
                     <ListIcon as={IoMdCheckmarkCircle} color='green.500' />
-                <strong>User Research </strong> 
+                <strong>Bold Visual Identity </strong> 
                 </ListItem>
                 <ListItem>
                     <ListIcon as={IoMdCheckmarkCircle } color='green.500' />
-                    <strong>Wireframing  </strong> 
+                    <strong>Compelling Messaging</strong> 
                 </ListItem>
                 <ListItem>
                     <ListIcon as={IoMdCheckmarkCircle } color='green.500' />
-                    <strong>Prototyping </strong> 
+                    <strong>Consistent Assets </strong> 
                 </ListItem>
             
                 </List>

@@ -7,6 +7,7 @@ import BibleRescue from '../../assets/bibleRescue.png';
 import StackPro from '../../assets/stackPro.png';
 import AlwaysGreen from '../../assets/AlwaysGreen.png';
 import Vima from '../../assets/vima.png';
+import Havagala from '../../assets/havagala.png'
 
 // Animation variants for the cards
 const cardVariants = {
@@ -30,7 +31,7 @@ const projectCards = [
   {
     id: 1,
     imageUrl: BibleRescue,
-    caseStudyLink: '#',
+    caseStudyLink: 'https://www.behance.net/gallery/216389589/Bible-Rescue-Website-Redesign-UX?',
     gitHubLink: '',
     liveLink: 'https://biblerescue.org/',
     type: 'ux'  
@@ -46,26 +47,34 @@ const projectCards = [
   {
     id: 3,
     imageUrl: StackPro,
-    caseStudyLink: '#',
-    gitHubLink: 'https://github.com/example3',
-    liveLink: 'https://example3.com',
+    caseStudyLink: 'https://www.behance.net/gallery/166118801/StackProUX-Web-Ap-UX-Design-Case-Study?tracking_source=search_projects|stackpro&l=1',
+    gitHubLink: 'https://github.com/leslieecoder/stackPro',
+    liveLink: 'https://stackproux.netlify.app/',
     type: 'ux'
   },
   {
     id: 4,
     imageUrl: AlwaysGreen,
-    caseStudyLink: '#',
-    gitHubLink: 'https://github.com/example4',
-    liveLink: 'https://example4.com',
+    caseStudyLink: '',
+    gitHubLink: 'https://github.com/leslieecoder/always-green-utah',
+    liveLink: 'https://alwaysgreen-utah.com/',
     type: 'web'
   },
   {
     id: 5,
     imageUrl: Vima,
-    caseStudyLink: '#',
+    caseStudyLink: 'https://www.behance.net/gallery/166473389/VIMA-Web-App-UX-DESIGN-CASE-STUDY-Virtual-Machine?tracking_source=search_projects|VIMA&l=14',
     gitHubLink: 'https://github.com/example5',
-    liveLink: 'https://example5.com',
-    type: 'web'
+    liveLink: '',
+    type: 'UX'
+  },
+  {
+    id: 5,
+    imageUrl: Havagala,
+    caseStudyLink: 'https://www.behance.net/gallery/166473389/VIMA-Web-App-UX-DESIGN-CASE-STUDY-Virtual-Machine?tracking_source=search_projects|VIMA&l=14',
+    gitHubLink: 'https://github.com/example5',
+    liveLink: '',
+    type: 'UX'
   },
 ];
 
