@@ -66,7 +66,7 @@ const projectCards = [
     caseStudyLink: 'https://www.behance.net/gallery/166473389/VIMA-Web-App-UX-DESIGN-CASE-STUDY-Virtual-Machine?tracking_source=search_projects|VIMA&l=14',
     gitHubLink: 'https://github.com/example5',
     liveLink: '',
-    type: 'UX'
+    type: 'ux'
   },
   {
     id: 5,
