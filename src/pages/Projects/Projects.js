@@ -8,7 +8,7 @@ import StackPro from '../../assets/stackPro.png';
 import AlwaysGreen from '../../assets/AlwaysGreen.png';
 import Vima from '../../assets/vima.png';
 import Havagala from '../../assets/havagala.png'
-
+import CapitalMomentum from '../../assets/capital-momentum.png'
 // Animation variants for the cards
 const cardVariants = {
   offscreen: {
@@ -35,6 +35,15 @@ const projectCards = [
     gitHubLink: '',
     liveLink: 'https://biblerescue.org/',
     type: 'ux'  
+  },
+  ,
+  {
+    id: 6,
+    imageUrl: CapitalMomentum,
+    caseStudyLink: '',
+    gitHubLink: 'https://github.com/leslieecoder/capital-momentum',
+    liveLink: 'https://capital-momentum.vercel.app/',
+    type: 'web'
   },
   {
     id: 2,
@@ -74,7 +83,7 @@ const projectCards = [
     caseStudyLink: 'https://www.behance.net/gallery/216481381/Havagala-Website-Redesign-UXIU?',
     gitHubLink: '',
     liveLink: '',
-    type: 'UX'
+    type: 'ux'
   },
 ];
 
@@ -147,7 +156,7 @@ export default function Projects() {
           <Button
             variant="outline"
             borderColor={filter === 'all' ? '#D6A6FF' : 'gray.200'}  // Light purple border when toggled
-            color={filter === 'all' ? '#D6A6FF' : 'gray.500'}  // Light purple text when toggled
+            color={filter === 'all' ? '#D6A6FF' : 'white'}  // Light purple text when toggled
             onClick={() => handleFilterChange('all')}
             isActive={filter === 'all'}
             padding="1rem"
@@ -157,7 +166,7 @@ export default function Projects() {
           <Button
             variant="outline"
             borderColor={filter === 'ux' ? '#D6A6FF' : 'gray.200'}  // Light purple border when toggled
-            color={filter === 'ux' ? '#D6A6FF' : 'gray.500'}  // Light purple text when toggled
+            color={filter === 'ux' ? '#D6A6FF' : 'white'}  // Light purple text when toggled
             onClick={() => handleFilterChange('ux')}
             isActive={filter === 'ux'}
             padding="1rem"
@@ -167,7 +176,7 @@ export default function Projects() {
           <Button
             variant="outline"
             borderColor={filter === 'web' ? '#D6A6FF' : 'gray.200'}  // Light purple border when toggled
-            color={filter === 'web' ? '#D6A6FF' : 'gray.500'}  // Light purple text when toggled
+            color={filter === 'web' ? '#D6A6FF' : 'white'}  // Light purple text when toggled
             onClick={() => handleFilterChange('web')}
             isActive={filter === 'web'}
             padding="1rem"
