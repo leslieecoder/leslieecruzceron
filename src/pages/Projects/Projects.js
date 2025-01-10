@@ -71,8 +71,8 @@ const projectCards = [
   {
     id: 5,
     imageUrl: Havagala,
-    caseStudyLink: 'https://www.behance.net/gallery/166473389/VIMA-Web-App-UX-DESIGN-CASE-STUDY-Virtual-Machine?tracking_source=search_projects|VIMA&l=14',
-    gitHubLink: 'https://github.com/example5',
+    caseStudyLink: 'https://www.behance.net/gallery/216481381/Havagala-Website-Redesign-UXIU?',
+    gitHubLink: '',
     liveLink: '',
     type: 'UX'
   },
