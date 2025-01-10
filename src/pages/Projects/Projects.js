@@ -36,15 +36,6 @@ const projectCards = [
     liveLink: 'https://biblerescue.org/',
     type: 'ux'  
   },
-  ,
-  {
-    id: 6,
-    imageUrl: CapitalMomentum,
-    caseStudyLink: '',
-    gitHubLink: 'https://github.com/leslieecoder/capital-momentum',
-    liveLink: 'https://capital-momentum.vercel.app/',
-    type: 'web'
-  },
   {
     id: 2,
     imageUrl: Edup,
@@ -78,12 +69,21 @@ const projectCards = [
     type: 'ux'
   },
   {
-    id: 5,
+    id: 6,
     imageUrl: Havagala,
     caseStudyLink: 'https://www.behance.net/gallery/216481381/Havagala-Website-Redesign-UXIU?',
     gitHubLink: '',
     liveLink: '',
     type: 'ux'
+  },
+
+  {
+    id: 7,
+    imageUrl: CapitalMomentum,
+    caseStudyLink: '',
+    gitHubLink: 'https://github.com/leslieecoder/capital-momentum',
+    liveLink: 'https://capital-momentum.vercel.app/',
+    type: 'web'
   },
 ];
 
