@@ -80,7 +80,7 @@ const projectCards = [
   {
     id: 7,
     imageUrl: CapitalMomentum,
-    caseStudyLink: '',
+    caseStudyLink:'',
     gitHubLink: 'https://github.com/leslieecoder/capital-momentum',
     liveLink: 'https://capital-momentum.vercel.app/',
     type: 'web'
@@ -209,14 +209,21 @@ export default function Projects() {
                 }}
               />
              <CardFooter justify="space-between" flexWrap="wrap">
-  <Button
-    flex="1"
-    variant="ghost"
-    leftIcon={<FaFigma />}
-    onClick={() => window.location.href = card.caseStudyLink}
-  >
-    Case Study
-  </Button>
+
+  {card.caseStudyLink ? (
+    <Button
+      flex="1"
+      variant="ghost"
+      leftIcon={<FaGit />}
+      onClick={() => window.location.href = card.caseStudyLink}
+    >
+      Case Study
+    </Button>
+  ) : (
+    <Button flex="1" variant="ghost" leftIcon={<FaGit />} isDisabled>
+      Case Study
+    </Button>
+  )}
   {card.gitHubLink ? (
     <Button
       flex="1"
