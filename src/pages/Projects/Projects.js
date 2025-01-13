@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { SimpleGrid, Image, Text, Card, Box, Center, CardFooter, Button, HStack } from '@chakra-ui/react';
-import { FaGit, FaFigma, FaRocket, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGit, FaRocket, FaExternalLinkAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import Edup from '../../assets/edup.png';
 import BibleRescue from '../../assets/bibleRescue.png';
