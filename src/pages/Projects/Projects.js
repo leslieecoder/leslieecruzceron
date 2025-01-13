@@ -9,6 +9,8 @@ import AlwaysGreen from '../../assets/AlwaysGreen.png';
 import Vima from '../../assets/vima.png';
 import Havagala from '../../assets/havagala.png'
 import CapitalMomentum from '../../assets/capital-momentum.png'
+import AldousLegal from '../../assets/aldousLegal.png'
+
 // Animation variants for the cards
 const cardVariants = {
   offscreen: {
@@ -83,6 +85,14 @@ const projectCards = [
     caseStudyLink:'',
     gitHubLink: 'https://github.com/leslieecoder/capital-momentum',
     liveLink: 'https://capital-momentum.vercel.app/',
+    type: 'web'
+  },
+  {
+    id: 8,
+    imageUrl: AldousLegal,
+    caseStudyLink:'https://www.behance.net/gallery/209718405/UX-Design-Case-Study-Collector-Dashboard',
+    gitHubLink: '',
+    liveLink: '',
     type: 'web'
   },
 ];
