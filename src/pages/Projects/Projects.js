@@ -93,7 +93,7 @@ const projectCards = [
     caseStudyLink:'https://www.behance.net/gallery/209718405/UX-Design-Case-Study-Collector-Dashboard',
     gitHubLink: '',
     liveLink: '',
-    type: 'web'
+    type: 'ux'
   },
 ];
 
