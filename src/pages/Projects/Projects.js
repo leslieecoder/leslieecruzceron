@@ -9,7 +9,7 @@ import AlwaysGreen from '../../assets/AlwaysGreen.png';
 import Vima from '../../assets/vima.png';
 import Havagala from '../../assets/havagala.png'
 import CapitalMomentum from '../../assets/capital-momentum.png'
-import AldousLegal from '../../assets/aldousLegal.png'
+import AldousLegal from '../../assets/aldouslegal.png'
 
 // Animation variants for the cards
 const cardVariants = {
