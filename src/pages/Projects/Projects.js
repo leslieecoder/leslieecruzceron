@@ -160,41 +160,49 @@ export default function Projects() {
         </Box>
       </motion.div>
 
-      {/* Filter buttons */}
-      <Center padding="2rem">
-        <HStack spacing="1rem">
-          <Button
-            variant="outline"
-            borderColor={filter === 'all' ? '#D6A6FF' : 'gray.200'}  // Light purple border when toggled
-            color={filter === 'all' ? '#D6A6FF' : 'white'}  // Light purple text when toggled
-            onClick={() => handleFilterChange('all')}
-            isActive={filter === 'all'}
-            padding="1rem"
-          >
-            All Projects
-          </Button>
-          <Button
-            variant="outline"
-            borderColor={filter === 'ux' ? '#D6A6FF' : 'gray.200'}  // Light purple border when toggled
-            color={filter === 'ux' ? '#D6A6FF' : 'white'}  // Light purple text when toggled
-            onClick={() => handleFilterChange('ux')}
-            isActive={filter === 'ux'}
-            padding="1rem"
-          >
-            UX Design Projects
-          </Button>
-          <Button
-            variant="outline"
-            borderColor={filter === 'web' ? '#D6A6FF' : 'gray.200'}  // Light purple border when toggled
-            color={filter === 'web' ? '#D6A6FF' : 'white'}  // Light purple text when toggled
-            onClick={() => handleFilterChange('web')}
-            isActive={filter === 'web'}
-            padding="1rem"
-          >
-            Web Development Projects
-          </Button>
-        </HStack>
-      </Center>
+    {/* Filter buttons */}
+<Center padding="2rem">
+  <HStack
+    spacing={{ base: '0.5rem', md: '1rem' }} // Adjust spacing for smaller screens
+    wrap="wrap" // Allow wrapping of buttons in smaller screens
+    justifyContent="center"
+  >
+    <Button
+      variant="outline"
+      borderColor={filter === 'all' ? '#D6A6FF' : 'gray.200'}
+      color={filter === 'all' ? '#D6A6FF' : 'white'}
+      onClick={() => handleFilterChange('all')}
+      isActive={filter === 'all'}
+      padding={{ base: '0.8rem', md: '1rem' }} // Smaller padding for mobile
+      fontSize={{ base: 'sm', md: 'md' }} // Smaller font size for mobile
+    >
+      All Projects
+    </Button>
+    <Button
+      variant="outline"
+      borderColor={filter === 'ux' ? '#D6A6FF' : 'gray.200'}
+      color={filter === 'ux' ? '#D6A6FF' : 'white'}
+      onClick={() => handleFilterChange('ux')}
+      isActive={filter === 'ux'}
+      padding={{ base: '0.8rem', md: '1rem' }}
+      fontSize={{ base: 'sm', md: 'md' }}
+    >
+      UX Design Projects
+    </Button>
+    <Button
+      variant="outline"
+      borderColor={filter === 'web' ? '#D6A6FF' : 'gray.200'}
+      color={filter === 'web' ? '#D6A6FF' : 'white'}
+      onClick={() => handleFilterChange('web')}
+      isActive={filter === 'web'}
+      padding={{ base: '0.8rem', md: '1rem' }}
+      fontSize={{ base: 'sm', md: 'md' }}
+    >
+      Web Development Projects
+    </Button>
+  </HStack>
+</Center>
+
 
       {/* Project cards */}
       <SimpleGrid spacing="7vw" templateColumns="repeat(auto-fill, minmax(400px, 1fr))">
