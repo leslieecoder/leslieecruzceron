@@ -226,50 +226,55 @@ export default function Projects() {
                   filter: 'brightness(120%)',
                 }}
               />
-              <CardFooter justify="space-between" flexWrap="wrap">
-                {card.caseStudyLink ? (
-                  <Button
-                    flex="1"
-                    variant="ghost"
-                    leftIcon={<FaGit />}
-                    onClick={() => window.location.href = card.caseStudyLink}
-                  >
-                    Case Study
-                  </Button>
-                ) : (
-                  <Button flex="1" variant="ghost" leftIcon={<FaGit />} isDisabled>
-                    Case Study
-                  </Button>
-                )}
-                {card.gitHubLink ? (
-                  <Button
-                    flex="1"
-                    variant="ghost"
-                    leftIcon={<FaGit />}
-                    onClick={() => window.location.href = card.gitHubLink}
-                  >
-                    GitHub
-                  </Button>
-                ) : (
-                  <Button flex="1" variant="ghost" leftIcon={<FaGit />} isDisabled>
-                    GitHub
-                  </Button>
-                )}
-                {card.liveLink ? (
-                  <Button
-                    flex="1"
-                    variant="ghost"
-                    leftIcon={<FaExternalLinkAlt />}
-                    onClick={() => window.location.href = card.liveLink}
-                  >
-                    Go Live
-                  </Button>
-                ) : (
-                  <Button flex="1" variant="ghost" leftIcon={<FaExternalLinkAlt />} isDisabled>
-                    Go Live
-                  </Button>
-                )}
-              </CardFooter>
+<CardFooter justify="space-between" flexWrap="wrap">
+  {card.caseStudyLink ? (
+    <Button
+      flex="1"
+      variant="ghost"
+      leftIcon={<FaGit />}
+      onClick={() => window.location.href = card.caseStudyLink}
+      size="sm"
+    >
+      {/* Show text only on larger screens */}
+      <Box display={{ base: 'none', md: 'inline' }}>Case Study</Box>
+    </Button>
+  ) : (
+    <Button flex="1" variant="ghost" leftIcon={<FaGit />} isDisabled size="sm">
+      <Box display={{ base: 'none', md: 'inline' }}>Case Study</Box>
+    </Button>
+  )}
+  {card.gitHubLink ? (
+    <Button
+      flex="1"
+      variant="ghost"
+      leftIcon={<FaGit />}
+      onClick={() => window.location.href = card.gitHubLink}
+      size="sm"
+    >
+      <Box display={{ base: 'none', md: 'inline' }}>GitHub</Box>
+    </Button>
+  ) : (
+    <Button flex="1" variant="ghost" leftIcon={<FaGit />} isDisabled size="sm">
+      <Box display={{ base: 'none', md: 'inline' }}>GitHub</Box>
+    </Button>
+  )}
+  {card.liveLink ? (
+    <Button
+      flex="1"
+      variant="ghost"
+      leftIcon={<FaExternalLinkAlt />}
+      onClick={() => window.location.href = card.liveLink}
+      size="sm"
+    >
+      <Box display={{ base: 'none', md: 'inline' }}>Go Live</Box>
+    </Button>
+  ) : (
+    <Button flex="1" variant="ghost" leftIcon={<FaExternalLinkAlt />} isDisabled size="sm">
+      <Box display={{ base: 'none', md: 'inline' }}>Go Live</Box>
+    </Button>
+  )}
+</CardFooter>
+
             </Card>
           </motion.div>
         ))}
