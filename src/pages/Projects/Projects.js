@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { SimpleGrid, Image, Text, Card, Box, Center, CardFooter, Button, HStack } from '@chakra-ui/react';
-import { FaGit, FaRocket, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGit, FaRocket, FaExternalLinkAlt, FaBehance } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import Edup from '../../assets/edup.png';
 import BibleRescue from '../../assets/bibleRescue.png';
@@ -204,8 +204,8 @@ export default function Projects() {
 </Center>
 
 
-        {/* Project cards */}
-        <SimpleGrid spacing="5vw" templateColumns="repeat(auto-fit, minmax(200px, 1fr))">
+      {/* Project cards */}
+      <SimpleGrid spacing="7vw" templateColumns="repeat(auto-fill, minmax(400px, 1fr))">
         {filteredProjects.map((card) => (
           <motion.div
             key={card.id}
@@ -214,10 +214,10 @@ export default function Projects() {
             viewport={{ once: true, amount: 0.8 }}
             variants={cardVariants}
           >
-            <Card maxW="sm" margin="auto">
+            <Card maxW="lg">
               <Image
                 objectFit="cover"
-                height={{ base: '150px', md: '200px' }}
+                height="250px"
                 width="100%"
                 src={card.imageUrl}
                 alt="Project Image"
@@ -226,21 +226,20 @@ export default function Projects() {
                   filter: 'brightness(120%)',
                 }}
               />
-<CardFooter justify="space-between" flexWrap="wrap">
+             <CardFooter justify="space-between" flexWrap="wrap">
+
   {card.caseStudyLink ? (
     <Button
       flex="1"
       variant="ghost"
-      leftIcon={<FaGit />}
+      leftIcon={<FaBehance />}
       onClick={() => window.location.href = card.caseStudyLink}
-      size="sm"
     >
-      {/* Show text only on larger screens */}
-      <Box display={{ base: 'none', md: 'inline' }}>Case Study</Box>
+      Case Study
     </Button>
   ) : (
-    <Button flex="1" variant="ghost" leftIcon={<FaGit />} isDisabled size="sm">
-      <Box display={{ base: 'none', md: 'inline' }}>Case Study</Box>
+    <Button flex="1" variant="ghost" leftIcon={<FaBehance  />} isDisabled>
+      Case Study
     </Button>
   )}
   {card.gitHubLink ? (
@@ -249,13 +248,12 @@ export default function Projects() {
       variant="ghost"
       leftIcon={<FaGit />}
       onClick={() => window.location.href = card.gitHubLink}
-      size="sm"
     >
-      <Box display={{ base: 'none', md: 'inline' }}>GitHub</Box>
+      GitHub
     </Button>
   ) : (
-    <Button flex="1" variant="ghost" leftIcon={<FaGit />} isDisabled size="sm">
-      <Box display={{ base: 'none', md: 'inline' }}>GitHub</Box>
+    <Button flex="1" variant="ghost" leftIcon={<FaGit />} isDisabled>
+      GitHub
     </Button>
   )}
   {card.liveLink ? (
@@ -264,13 +262,12 @@ export default function Projects() {
       variant="ghost"
       leftIcon={<FaExternalLinkAlt />}
       onClick={() => window.location.href = card.liveLink}
-      size="sm"
     >
-      <Box display={{ base: 'none', md: 'inline' }}>Go Live</Box>
+      Go Live
     </Button>
   ) : (
-    <Button flex="1" variant="ghost" leftIcon={<FaExternalLinkAlt />} isDisabled size="sm">
-      <Box display={{ base: 'none', md: 'inline' }}>Go Live</Box>
+    <Button flex="1" variant="ghost" leftIcon={<FaExternalLinkAlt />} isDisabled>
+      Go Live
     </Button>
   )}
 </CardFooter>
